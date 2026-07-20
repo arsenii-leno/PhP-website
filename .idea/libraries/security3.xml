@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="security3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/security/security.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/security/security-content.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

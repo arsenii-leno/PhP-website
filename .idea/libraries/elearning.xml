@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="elearning">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/elearning/elearning.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/elearning/elearning-content.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

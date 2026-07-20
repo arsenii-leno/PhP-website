@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="detailing">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/detailing/detailing.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/detailing/detailing-content.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

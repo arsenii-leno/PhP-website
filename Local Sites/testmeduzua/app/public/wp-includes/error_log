@@ -1,0 +1,17 @@
+[23-Dec-2020 17:47:52 Europe/Moscow] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/a49718/public_html/med.uz.ua/wp-includes/class-oembed.php:12
+Stack trace:
+#0 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-includes/class-oembed.php on line 12
+[07-Feb-2021 23:02:59 Europe/Moscow] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home/a49718/public_html/med.uz.ua/wp-includes/functions.php on line 8
+[07-Feb-2021 23:02:59 Europe/Moscow] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home/a49718/public_html/med.uz.ua/wp-includes/functions.php on line 8
+[07-Feb-2021 23:02:59 Europe/Moscow] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/a49718/public_html/med.uz.ua/wp-includes/functions.php on line 8
+[07-Feb-2021 23:02:59 Europe/Moscow] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home/a49718/public_html/med.uz.ua/wp-includes/functions.php on line 8
+[07-Feb-2021 23:02:59 Europe/Moscow] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/a49718/public_html/med.uz.ua/wp-includes/functions.php on line 8
+[24-Jul-2021 10:17:29 Europe/Moscow] PHP Fatal error:  Uncaught Error: Class 'Walker' not found in /home/a49718/public_html/med.uz.ua/wp-includes/class-walker-nav-menu.php:17
+Stack trace:
+#0 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-includes/class-walker-nav-menu.php on line 17
+[25-Jul-2021 19:35:16 Europe/Moscow] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home/a49718/public_html/med.uz.ua/wp-includes/locale.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-includes/locale.php on line 11

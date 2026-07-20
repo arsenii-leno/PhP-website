@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jeweler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/jeweler/jeweler.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

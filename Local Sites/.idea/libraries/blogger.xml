@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="blogger">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/blogger/blogger.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="agency">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/agency/agency.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="garden">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/garden/garden-content2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/garden/garden-content.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

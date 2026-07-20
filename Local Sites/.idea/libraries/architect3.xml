@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="architect3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/architect3/architect3.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

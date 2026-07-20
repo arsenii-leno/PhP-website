@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mechanic3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/mechanic3/mechanic3.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

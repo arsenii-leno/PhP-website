@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="floatton">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/plugins/floatton/floatton.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

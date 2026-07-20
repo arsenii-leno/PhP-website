@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kindergarten">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/kindergarten/kindergarten.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

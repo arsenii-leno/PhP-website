@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="restaurant">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/restaurant/restaurant.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

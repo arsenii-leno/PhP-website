@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cryptocurrency">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/cryptocurrency/cryptocurrency.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

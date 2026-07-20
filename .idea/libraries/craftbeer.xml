@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="craftbeer">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/craftbeer/craftbeer.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

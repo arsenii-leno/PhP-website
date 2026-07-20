@@ -1,0 +1,36 @@
+@import "compass";
+
+.floatton-badge{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #999;
+	font-size: 14px;
+	text-align: center;
+	margin: 5px 0 0;
+	width: 150px;
+	.dashicons{
+		color: #1e73be;
+		font-size: 120px;
+		display: block;
+		text-align: center;
+		height: 120px;
+		width: 150px;
+	}
+}
+.about-wrap .floatton-features-button{
+	font-size: 16px;
+	height: auto;
+	padding: 8px 25px;
+	margin-top: 20px;
+}
+
+.about-wrap .floatton-features{
+	img{
+		@include transition( opacity .15s ease-in-out );
+		@include opacity( 0.88 );
+		&:hover{
+			@include opacity( 1 );
+		}
+	}
+}

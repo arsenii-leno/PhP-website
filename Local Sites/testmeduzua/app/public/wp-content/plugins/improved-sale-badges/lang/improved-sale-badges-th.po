@@ -1,0 +1,851 @@
+# Copyright (C) 2019 Improved Badges for WooCommerce
+# This file is distributed under the same license as the Improved Badges for WooCommerce package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Improved Badges for WooCommerce 4.0.0\n"
+"Report-Msgid-Bugs-To: https://help.xforwoocommerce.com\n"
+"POT-Creation-Date: 2019-11-29 17:14:54+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-11-29 17:14:54+00:00\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"X-Poedit-KeywordsList: esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language: th\n"
+
+#: improved-sale-badges.php:69
+msgid ""
+"This plugin requires WooCommerce. Download it from WooCommerce official "
+"website"
+msgstr ""
+
+#: improved-sale-badges.php:176
+msgid "Improved Badges"
+msgstr ""
+
+#: includes/isb-frontend.php:101
+msgid "d"
+msgstr ""
+
+#: includes/isb-frontend.php:102
+msgid "days"
+msgstr ""
+
+#: includes/isb-frontend.php:362
+msgid "Text"
+msgstr ""
+
+#: includes/isb-settings.php:117
+msgid "Left"
+msgstr ""
+
+#: includes/isb-settings.php:118
+msgid "Right"
+msgstr ""
+
+#: includes/isb-settings.php:168
+msgid "Badges and Counters"
+msgstr ""
+
+#. #-#-#-#-#  improved-sale-badges-en_UK.pot (Improved Badges for WooCommerce 4.0.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: includes/isb-settings.php:168 includes/isb-settings.php:169
+msgid "Improved Badges for WooCommerce"
+msgstr ""
+
+#: includes/isb-settings.php:169
+msgid "Settings page for Improved Badges for WooCommerce!"
+msgstr ""
+
+#: includes/isb-settings.php:172
+msgid "Visit XforWooCommerce.com"
+msgstr ""
+
+#: includes/isb-settings.php:176
+msgid "Get help"
+msgstr ""
+
+#: includes/isb-settings.php:181
+msgid "Dashboard"
+msgstr ""
+
+#: includes/isb-settings.php:182
+msgid "Dashboard Overview"
+msgstr ""
+
+#: includes/isb-settings.php:185
+msgid "Default Badge"
+msgstr ""
+
+#: includes/isb-settings.php:186
+msgid "Default Badges Options"
+msgstr ""
+
+#: includes/isb-settings.php:189
+msgid "Badge Presets"
+msgstr ""
+
+#: includes/isb-settings.php:190
+msgid "Badge Presets Options"
+msgstr ""
+
+#: includes/isb-settings.php:193
+msgid "Badge Manager"
+msgstr ""
+
+#: includes/isb-settings.php:194
+msgid "Manager Options"
+msgstr ""
+
+#: includes/isb-settings.php:197
+msgid "Timer/Countdowns"
+msgstr ""
+
+#: includes/isb-settings.php:198
+msgid "Timer/Countdowns Options"
+msgstr ""
+
+#: includes/isb-settings.php:201
+msgid "Installation"
+msgstr ""
+
+#: includes/isb-settings.php:202
+msgid "Installation Options"
+msgstr ""
+
+#: includes/isb-settings.php:213
+msgid "Visit XforWooCommerce.com store, demos and knowledge base."
+msgstr ""
+
+#: includes/isb-settings.php:218
+msgid "Help Center"
+msgstr ""
+
+#: includes/isb-settings.php:219
+msgid "Need support? Visit the Help Center."
+msgstr ""
+
+#: includes/isb-settings.php:224
+msgid "Automatic Updates"
+msgstr ""
+
+#: includes/isb-settings.php:225
+msgid ""
+"Get automatic updates, by downloading and installing the Envato Market "
+"plugin."
+msgstr ""
+
+#: includes/isb-settings.php:233
+msgid "Plugin Options"
+msgstr ""
+
+#: includes/isb-settings.php:236
+msgid "Quick export/import, backup and restore, or just reset your optons here"
+msgstr ""
+
+#: includes/isb-settings.php:241 includes/isb-settings.php:312
+msgid "Preview"
+msgstr ""
+
+#: includes/isb-settings.php:243 includes/isb-settings.php:314
+msgid "Current badge preview"
+msgstr ""
+
+#: includes/isb-settings.php:251 includes/isb-settings.php:326
+#: includes/svx-settings/svx-settings.php:406
+msgid "Style"
+msgstr ""
+
+#: includes/isb-settings.php:253 includes/isb-settings.php:328
+msgid "Select sale badge style"
+msgstr ""
+
+#: includes/isb-settings.php:261 includes/isb-settings.php:334
+#: includes/svx-settings/svx-settings.php:377
+msgid "Color"
+msgstr ""
+
+#: includes/isb-settings.php:263 includes/isb-settings.php:336
+msgid "Select sale badge color"
+msgstr ""
+
+#: includes/isb-settings.php:271 includes/isb-settings.php:342
+msgid "Position"
+msgstr ""
+
+#: includes/isb-settings.php:273 includes/isb-settings.php:344
+msgid "Select sale badge position"
+msgstr ""
+
+#: includes/isb-settings.php:281 includes/isb-settings.php:350
+msgid "Special"
+msgstr ""
+
+#: includes/isb-settings.php:283 includes/isb-settings.php:352
+msgid "Select special badge"
+msgstr ""
+
+#: includes/isb-settings.php:286 includes/isb-settings.php:355
+#: includes/isb-settings.php:746 includes/isb-settings.php:761
+#: includes/isb-settings.php:772 includes/isb-settings.php:783
+#: includes/isb-settings.php:794 includes/svx-settings/svx-settings.php:375
+msgid "None"
+msgstr ""
+
+#: includes/isb-settings.php:291 includes/isb-settings.php:358
+msgid "Special Text"
+msgstr ""
+
+#: includes/isb-settings.php:293 includes/isb-settings.php:360
+msgid "Enter special badge text"
+msgstr ""
+
+#: includes/isb-settings.php:301
+msgid "Presets Manager"
+msgstr ""
+
+#: includes/isb-settings.php:304
+msgid "Add badge presets using the Presets Manager"
+msgstr ""
+
+#: includes/isb-settings.php:307 includes/isb-settings.php:319
+msgid "Preset Name"
+msgstr ""
+
+#: includes/isb-settings.php:322
+msgid "Enter preset name"
+msgstr ""
+
+#: includes/isb-settings.php:368
+msgid "Badge Overrides"
+msgstr ""
+
+#: includes/isb-settings.php:371
+msgid "Set badge overrides"
+msgstr ""
+
+#: includes/isb-settings.php:377
+msgid "Sale Badge"
+msgstr ""
+
+#: includes/isb-settings.php:380
+msgid "Set sale badge"
+msgstr ""
+
+#: includes/isb-settings.php:388
+msgid "Out of stock Badge"
+msgstr ""
+
+#: includes/isb-settings.php:391
+msgid "Set out of stock badge"
+msgstr ""
+
+#: includes/isb-settings.php:399
+msgid "New Badge Period"
+msgstr ""
+
+#: includes/isb-settings.php:402
+msgid "Set new product expire in period (days)"
+msgstr ""
+
+#: includes/isb-settings.php:408
+msgid "New Badge"
+msgstr ""
+
+#: includes/isb-settings.php:411
+msgid "Set new product badge"
+msgstr ""
+
+#: includes/isb-settings.php:419
+msgid "Featured Badge"
+msgstr ""
+
+#: includes/isb-settings.php:422
+msgid "Set featured badge"
+msgstr ""
+
+#: includes/isb-settings.php:430
+msgid "Tag Badges"
+msgstr ""
+
+#: includes/isb-settings.php:433
+msgid "Add tag badges"
+msgstr ""
+
+#: includes/isb-settings.php:436 includes/isb-settings.php:441
+#: includes/isb-settings.php:474 includes/isb-settings.php:479
+#: includes/svx-settings/svx-settings.php:458
+#: includes/svx-settings/svx-settings.php:523
+msgid "Name"
+msgstr ""
+
+#: includes/isb-settings.php:444 includes/isb-settings.php:482
+msgid "Enter override name"
+msgstr ""
+
+#: includes/isb-settings.php:448 includes/isb-settings.php:486
+msgid "Term"
+msgstr ""
+
+#: includes/isb-settings.php:451 includes/isb-settings.php:489
+msgid "Set override term"
+msgstr ""
+
+#: includes/isb-settings.php:457 includes/isb-settings.php:497
+msgid "Preset"
+msgstr ""
+
+#: includes/isb-settings.php:460 includes/isb-settings.php:500
+msgid "Set override preset"
+msgstr ""
+
+#: includes/isb-settings.php:468
+msgid "Category Badges"
+msgstr ""
+
+#: includes/isb-settings.php:471
+msgid "Add category badges"
+msgstr ""
+
+#: includes/isb-settings.php:510
+msgid "Use Tempalte Overrides"
+msgstr ""
+
+#: includes/isb-settings.php:512
+msgid ""
+"This is the default installation when checked, sale-flash.php template will "
+"be replaced with the plugin badge."
+msgstr ""
+
+#: includes/isb-settings.php:519
+msgid "Shop Init Action"
+msgstr ""
+
+#: includes/isb-settings.php:521
+msgid ""
+"Use custom initialization action for Shop/Product Archive Pages. Use actions "
+"initiated in content-product.php template. Please enter action name in "
+"following format action_name:priority"
+msgstr ""
+
+#: includes/isb-settings.php:528
+msgid "Single Product Init Action"
+msgstr ""
+
+#: includes/isb-settings.php:530
+msgid ""
+"Use custom initialization action for Single Product Pages. Use actions "
+"initiated in content-single-product.php template. Please enter action name "
+"in following format action_name:priority"
+msgstr ""
+
+#: includes/isb-settings.php:537
+msgid "Plugin Scripts"
+msgstr ""
+
+#: includes/isb-settings.php:539
+msgid ""
+"Check this option to enable plugin scripts in all pages. This option fixes "
+"issues in Quick Views."
+msgstr ""
+
+#: includes/isb-settings.php:547
+msgid "Disable Timers"
+msgstr ""
+
+#: includes/isb-settings.php:549
+msgid "Select sale timers to disable."
+msgstr ""
+
+#: includes/isb-settings.php:552
+msgid "Starting Sale"
+msgstr ""
+
+#: includes/isb-settings.php:553
+msgid "Ending Sale"
+msgstr ""
+
+#: includes/isb-settings.php:562
+msgid "Adjust Timer"
+msgstr ""
+
+#: includes/isb-settings.php:564
+msgid "Adjust sale timer countdown clock. Option is set in minutes."
+msgstr ""
+
+#: includes/isb-settings.php:660
+msgid "Sale Badges"
+msgstr ""
+
+#: includes/isb-settings.php:709
+msgid "Badge Settings"
+msgstr ""
+
+#: includes/isb-settings.php:743
+msgid "Badge Preset"
+msgstr ""
+
+#: includes/isb-settings.php:759
+msgid "Badge Style"
+msgstr ""
+
+#: includes/isb-settings.php:770
+msgid "Badge Color"
+msgstr ""
+
+#: includes/isb-settings.php:781
+msgid "Badge Position"
+msgstr ""
+
+#: includes/isb-settings.php:792
+msgid "Special Badge"
+msgstr ""
+
+#: includes/isb-settings.php:803
+msgid "Special Badge Text"
+msgstr ""
+
+#: includes/styles/isb_style_arrow.php:7
+#: includes/styles/isb_style_arrow_alt.php:7
+#: includes/styles/isb_style_basic.php:7
+#: includes/styles/isb_style_basic_alt.php:7
+#: includes/styles/isb_style_candy.php:25
+#: includes/styles/isb_style_candy_arrow.php:13
+#: includes/styles/isb_style_cloud.php:25 includes/styles/isb_style_cool.php:25
+#: includes/styles/isb_style_eu.php:9 includes/styles/isb_style_eu_2.php:9
+#: includes/styles/isb_style_eu_3.php:6 includes/styles/isb_style_fresh.php:27
+#: includes/styles/isb_style_fresh_2.php:23
+#: includes/styles/isb_style_inline.php:7
+#: includes/styles/isb_style_modern.php:10
+#: includes/styles/isb_style_plain.php:7 includes/styles/isb_style_pop.php:12
+#: includes/styles/isb_style_pop_round.php:12
+#: includes/styles/isb_style_pure.php:7
+#: includes/styles/isb_style_random_squares.php:21
+#: includes/styles/isb_style_round.php:13
+#: includes/styles/isb_style_shopkit.php:12
+#: includes/styles/isb_style_tag.php:15
+#: includes/styles/isb_style_transparent.php:10
+#: includes/styles/isb_style_transparent_2.php:7
+#: includes/styles/isb_style_triangle.php:25
+#: includes/styles/isb_style_valentine.php:14
+#: includes/styles/isb_style_vintage.php:8
+#: includes/styles/isb_style_xmas_1.php:18
+#: includes/styles/isb_style_xmas_2.php:19
+msgid "%"
+msgstr ""
+
+#: includes/styles/isb_style_arrow.php:10
+msgid "DISCOUNT"
+msgstr ""
+
+#: includes/styles/isb_style_arrow.php:15
+#: includes/styles/isb_style_basic.php:15
+#: includes/styles/isb_style_basic_alt.php:15
+#: includes/styles/isb_style_candy.php:32
+#: includes/styles/isb_style_candy_arrow.php:20
+#: includes/styles/isb_style_cloud.php:32 includes/styles/isb_style_cool.php:32
+#: includes/styles/isb_style_fresh_2.php:30
+#: includes/styles/isb_style_inline.php:14
+#: includes/styles/isb_style_modern.php:18
+#: includes/styles/isb_style_pop_round.php:18
+#: includes/styles/isb_style_pure.php:15 includes/styles/isb_style_tag.php:22
+#: includes/styles/isb_style_transparent.php:18
+#: includes/styles/isb_style_transparent_2.php:15
+#: includes/styles/isb_style_triangle.php:32
+#: includes/styles/isb_style_valentine.php:21
+#: includes/svx-settings/svx-settings.php:220
+#: includes/svx-settings/svx-settings.php:229
+msgid "Save"
+msgstr ""
+
+#: includes/styles/isb_style_arrow.php:18
+#: includes/styles/isb_style_basic.php:18
+#: includes/styles/isb_style_basic_alt.php:18
+#: includes/styles/isb_style_candy.php:35
+#: includes/styles/isb_style_candy_arrow.php:23
+#: includes/styles/isb_style_cloud.php:35 includes/styles/isb_style_cool.php:35
+#: includes/styles/isb_style_fresh_2.php:33
+#: includes/styles/isb_style_inline.php:17
+#: includes/styles/isb_style_modern.php:21
+#: includes/styles/isb_style_pop_round.php:21
+#: includes/styles/isb_style_pure.php:18 includes/styles/isb_style_tag.php:25
+#: includes/styles/isb_style_transparent.php:21
+#: includes/styles/isb_style_transparent_2.php:18
+#: includes/styles/isb_style_triangle.php:35
+#: includes/styles/isb_style_valentine.php:24
+msgid "Up to"
+msgstr ""
+
+#: includes/styles/isb_style_arrow.php:33
+#: includes/styles/isb_style_round.php:24
+msgid "Starts"
+msgstr ""
+
+#: includes/styles/isb_style_arrow.php:36
+#: includes/styles/isb_style_round.php:27
+msgid "Ends"
+msgstr ""
+
+#: includes/styles/isb_style_arrow_alt.php:10
+#: includes/styles/isb_style_basic.php:10
+#: includes/styles/isb_style_basic_alt.php:10
+#: includes/styles/isb_style_fresh.php:30
+#: includes/styles/isb_style_modern.php:13
+#: includes/styles/isb_style_pure.php:10
+#: includes/styles/isb_style_random_squares.php:20
+#: includes/styles/isb_style_ribbon.php:10
+#: includes/styles/isb_style_ribbon.php:13
+#: includes/styles/isb_style_ribbon.php:29
+#: includes/styles/isb_style_ribbon.php:32
+#: includes/styles/isb_style_round.php:16
+#: includes/styles/isb_style_transparent.php:13
+#: includes/styles/isb_style_transparent_2.php:10
+msgid "OFF"
+msgstr ""
+
+#: includes/styles/isb_style_arrow_alt.php:18
+#: includes/styles/isb_style_basic.php:33
+#: includes/styles/isb_style_basic_alt.php:33
+#: includes/styles/isb_style_border_1.php:15
+#: includes/styles/isb_style_border_2.php:15
+#: includes/styles/isb_style_border_3.php:15
+#: includes/styles/isb_style_border_4.php:15
+#: includes/styles/isb_style_border_5.php:15
+#: includes/styles/isb_style_border_6.php:15
+#: includes/styles/isb_style_border_7.php:15
+#: includes/styles/isb_style_border_8.php:15
+#: includes/styles/isb_style_border_9.php:18
+#: includes/styles/isb_style_candy.php:50
+#: includes/styles/isb_style_candy_arrow.php:41
+#: includes/styles/isb_style_cloud.php:50 includes/styles/isb_style_cool.php:50
+#: includes/styles/isb_style_eu.php:29 includes/styles/isb_style_eu_2.php:28
+#: includes/styles/isb_style_eu_3.php:27 includes/styles/isb_style_fresh.php:38
+#: includes/styles/isb_style_fresh_2.php:48
+#: includes/styles/isb_style_inline.php:32
+#: includes/styles/isb_style_modern.php:36
+#: includes/styles/isb_style_plain.php:17 includes/styles/isb_style_pop.php:22
+#: includes/styles/isb_style_pop_round.php:32
+#: includes/styles/isb_style_pure.php:33
+#: includes/styles/isb_style_random_squares.php:31
+#: includes/styles/isb_style_responsive_1.php:23
+#: includes/styles/isb_style_responsive_10.php:23
+#: includes/styles/isb_style_responsive_2.php:23
+#: includes/styles/isb_style_responsive_3.php:23
+#: includes/styles/isb_style_responsive_4.php:23
+#: includes/styles/isb_style_responsive_5.php:23
+#: includes/styles/isb_style_responsive_6.php:23
+#: includes/styles/isb_style_responsive_7.php:23
+#: includes/styles/isb_style_responsive_8.php:23
+#: includes/styles/isb_style_responsive_9.php:25
+#: includes/styles/isb_style_ribbon.php:53
+#: includes/styles/isb_style_shopkit.php:22
+#: includes/styles/isb_style_tag.php:40
+#: includes/styles/isb_style_transparent.php:36
+#: includes/styles/isb_style_transparent_2.php:33
+#: includes/styles/isb_style_triangle.php:50
+#: includes/styles/isb_style_valentine.php:39
+#: includes/styles/isb_style_vintage.php:27
+#: includes/styles/isb_style_xmas_1.php:29
+#: includes/styles/isb_style_xmas_2.php:30
+msgid "Starts in"
+msgstr ""
+
+#: includes/styles/isb_style_arrow_alt.php:21
+#: includes/styles/isb_style_basic.php:36
+#: includes/styles/isb_style_basic_alt.php:36
+#: includes/styles/isb_style_border_1.php:18
+#: includes/styles/isb_style_border_2.php:18
+#: includes/styles/isb_style_border_3.php:18
+#: includes/styles/isb_style_border_4.php:18
+#: includes/styles/isb_style_border_5.php:18
+#: includes/styles/isb_style_border_6.php:18
+#: includes/styles/isb_style_border_7.php:18
+#: includes/styles/isb_style_border_8.php:18
+#: includes/styles/isb_style_border_9.php:21
+#: includes/styles/isb_style_candy.php:53
+#: includes/styles/isb_style_candy_arrow.php:44
+#: includes/styles/isb_style_cloud.php:53 includes/styles/isb_style_cool.php:53
+#: includes/styles/isb_style_eu.php:32 includes/styles/isb_style_eu_2.php:31
+#: includes/styles/isb_style_eu_3.php:30 includes/styles/isb_style_fresh.php:41
+#: includes/styles/isb_style_fresh_2.php:51
+#: includes/styles/isb_style_inline.php:35
+#: includes/styles/isb_style_modern.php:39
+#: includes/styles/isb_style_plain.php:20 includes/styles/isb_style_pop.php:25
+#: includes/styles/isb_style_pop_round.php:35
+#: includes/styles/isb_style_pure.php:36
+#: includes/styles/isb_style_random_squares.php:34
+#: includes/styles/isb_style_responsive_1.php:26
+#: includes/styles/isb_style_responsive_10.php:26
+#: includes/styles/isb_style_responsive_2.php:26
+#: includes/styles/isb_style_responsive_3.php:26
+#: includes/styles/isb_style_responsive_4.php:26
+#: includes/styles/isb_style_responsive_5.php:26
+#: includes/styles/isb_style_responsive_6.php:26
+#: includes/styles/isb_style_responsive_7.php:26
+#: includes/styles/isb_style_responsive_8.php:26
+#: includes/styles/isb_style_responsive_9.php:28
+#: includes/styles/isb_style_ribbon.php:56
+#: includes/styles/isb_style_shopkit.php:25
+#: includes/styles/isb_style_tag.php:43
+#: includes/styles/isb_style_transparent.php:39
+#: includes/styles/isb_style_transparent_2.php:36
+#: includes/styles/isb_style_triangle.php:53
+#: includes/styles/isb_style_valentine.php:42
+#: includes/styles/isb_style_vintage.php:30
+#: includes/styles/isb_style_xmas_1.php:32
+#: includes/styles/isb_style_xmas_2.php:33
+msgid "Ends in"
+msgstr ""
+
+#: includes/styles/isb_style_eu.php:3 includes/styles/isb_style_eu_2.php:3
+#: includes/styles/isb_style_eu_3.php:4 includes/styles/isb_style_vintage.php:2
+#: includes/styles/isb_style_xmas_1.php:21
+#: includes/styles/isb_style_xmas_2.php:22
+msgid "SALE"
+msgstr ""
+
+#: includes/styles/isb_style_eu.php:12 includes/styles/isb_style_vintage.php:11
+msgid "PRICE OFF"
+msgstr ""
+
+#: includes/styles/isb_style_modern.php:3
+msgid "On Sale!"
+msgstr ""
+
+#: includes/styles/isb_style_tag.php:9
+msgid "ON SALE"
+msgstr ""
+
+#: includes/styles/isb_style_transparent.php:3
+msgid "Sale!"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:141
+msgid "Plugin not registered!"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:143
+msgid ""
+"license is not registered. Please register! Click Register now button to "
+"start."
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:144
+msgid "Need help? Visit this link"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:144
+msgid "How to register?"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:146
+msgid "Register now"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:152
+msgid "Connecting to server"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:154
+msgid "OK"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:155
+msgid "Remove license"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:156
+#: includes/svx-settings/svx-settings.php:188
+msgid "License details"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:157
+msgid "Extend support"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:163
+msgid "Confirm key"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:164
+msgid "Get key"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:258
+msgid "Export"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:258
+msgid "Import"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:258
+msgid "Backup"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:258
+msgid "Restore"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:258
+msgid "Reset"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:266
+msgid "Add +"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:306
+msgid "Configure"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:314
+#: includes/svx-settings/svx-settings.php:335
+msgid "Add Item +"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:343
+msgid "Include/Exclude Manager"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:344
+msgid "Exclude"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:345
+msgid "Include"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:357
+msgid "Terms Manager"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:364
+msgid "Custom Order"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:373
+msgid "Type"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:376
+msgid "Plain Text"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:378
+msgid "Thumbnail"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:379
+msgid "Select Box"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:381
+#: includes/svx-settings/svx-settings.php:389
+msgid "System Select"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:382
+msgid "Live Select"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:386
+msgid "Input Field"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:387
+msgid "Checkbox"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:388
+msgid "Textarea"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:408
+msgid "Border"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:409
+msgid "Background"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:410
+msgid "Round"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:414
+msgid "Normal"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:418
+msgid "Active"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:422
+msgid "Disabled"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:426
+msgid "Out of stock"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:433
+msgid "Show labels"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:440
+msgid "Swatch size"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:464
+msgid "Meta value"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:471
+#: includes/svx-settings/svx-settings.php:529
+msgid "Value"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:486
+msgid "Min"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:488
+msgid "Max"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:495
+msgid "Count"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:502
+#: includes/svx-settings/svx-settings.php:550
+msgid "Tooltip"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:537
+msgid "Add Image +"
+msgstr ""
+
+#: includes/svx-settings/svx-settings.php:544
+msgid "Price"
+msgstr ""
+
+#. #-#-#-#-#  improved-sale-badges-en_UK.pot (Improved Badges for WooCommerce 4.0.0)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  improved-sale-badges-en_UK.pot (Improved Badges for WooCommerce 4.0.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "https://xforwoocommerce.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "XforWooCommerce Themes and Plugins! Visit https://xforwoocommerce.com"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "7VX LLC, USA CA"
+msgstr ""

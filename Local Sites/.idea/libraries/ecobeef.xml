@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ecobeef">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/ecobeef/ecobeef.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

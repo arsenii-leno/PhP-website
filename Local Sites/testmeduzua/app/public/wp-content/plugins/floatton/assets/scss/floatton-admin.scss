@@ -1,0 +1,74 @@
+@import "compass";
+
+body{
+	&.post-type-floatton{
+		#misc-publishing-actions{
+			.misc-pub-visibility{
+				display: none;
+			}
+		}
+	}
+	.floatton-icon-selection{
+		height: 175px;
+		overflow-y: scroll;
+		.dashicons, .floatton-no-icon{
+			font-size: 30px;
+		    height: 40px;
+		    width: 35px;
+		    padding-right: 5px;
+		    @include opacity( 0.5 );
+		    &:hover{
+		    	@include opacity( 1 );
+		    }
+		    &.floatton-selected-icon{
+		    	
+		    }
+		}
+		.floatton-no-icon{
+			font-size: 13px;
+			line-height: 25px;
+			font-family: sans-serif;
+		}
+		input{
+			display: none;
+		}
+		input[type="radio"]:checked+label{
+		    color: #006799;
+		    .dashicons{
+		    	@include opacity( 1 );
+		    }
+		}
+	}
+	.floatton-custom-content, .floatton-content-open-opts{
+		display: none;
+	}
+	div.floatton-show{
+		display: block;
+	}
+	div.floatton-hide{
+		display: none;
+	}
+	.floatton-content-default{
+		table{
+			margin: 0px;
+		}
+	}
+	.floatton-visibility-meta{
+		th, td{
+			padding: 5px 10px;
+		}
+		label{
+			font-weight: normal;
+		}
+		th{
+			small{
+				@include opacity( 0.6 );
+			}
+		}
+	}
+	.floatton-styling-meta{
+		th, td{
+			vertical-align: top;
+		}
+	}
+}

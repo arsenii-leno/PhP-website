@@ -1,0 +1,4 @@
+[08-Mar-2022 07:43:21 Europe/Moscow] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/a49718/public_html/med.uz.ua/wp-content/themes/betheme/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/themes/betheme/index.php on line 10

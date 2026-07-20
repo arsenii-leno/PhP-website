@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fantasy">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/fantasy/fantasy.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

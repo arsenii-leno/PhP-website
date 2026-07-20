@@ -1,0 +1,439 @@
+# Translation of Plugins - Call Now Button &#8211; The #1 Click to Call Button for WordPress - Stable (latest release) in English (UK)
+# This file is distributed under the same license as the Plugins - Call Now Button &#8211; The #1 Click to Call Button for WordPress - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-09 12:03:48+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/4.0.3\n"
+"Language: en_GB\n"
+"Project-Id-Version: Plugins - Call Now Button &#8211; The #1 Click to Call Button for WordPress - Stable (latest release)\n"
+
+#: src/admin/action/CnbActionController.php:79
+#: src/admin/action/CnbActionController.php:132
+#: src/admin/action/CnbActionController.php:222
+#: src/admin/action/CnbActionController.php:320
+#: src/admin/api-key/class-ott-controller.php:33
+#: src/admin/api-key/CnbApiKeyController.php:25
+#: src/admin/api-key/CnbApiKeyController.php:85
+#: src/admin/api-key/CnbApiKeyController.php:171
+#: src/admin/api-key/CnbApiKeyController.php:219
+#: src/admin/button/CnbButtonController.php:30
+#: src/admin/button/CnbButtonController.php:153
+#: src/admin/button/CnbButtonController.php:277
+#: src/admin/button/CnbButtonController.php:359
+#: src/admin/button/CnbButtonController.php:409
+#: src/admin/condition/CnbConditionController.php:48
+#: src/admin/condition/CnbConditionController.php:203
+#: src/admin/condition/CnbConditionController.php:252
+#: src/admin/condition/CnbConditionController.php:296
+#: src/admin/domain/CnbDomainController.php:25
+#: src/admin/domain/CnbDomainController.php:98
+#: src/admin/domain/CnbDomainController.php:162
+#: src/admin/domain/CnbDomainController.php:289
+#: src/admin/profile/CnbProfileController.php:293
+#: src/admin/settings/CnbSettingsController.php:284
+#: src/admin/settings/CnbSettingsController.php:333
+#: src/admin/settings/CnbSettingsController.php:358
+msgid "Unauthorized"
+msgstr "Unauthorised"
+
+#: src/admin/action/CnbActionController.php:78
+#: src/admin/action/CnbActionController.php:131
+#: src/admin/action/CnbActionController.php:221
+#: src/admin/action/CnbActionController.php:319
+#: src/admin/api-key/class-ott-controller.php:32
+#: src/admin/api-key/CnbApiKeyController.php:24
+#: src/admin/api-key/CnbApiKeyController.php:84
+#: src/admin/api-key/CnbApiKeyController.php:170
+#: src/admin/api-key/CnbApiKeyController.php:218
+#: src/admin/button/CnbButtonController.php:29
+#: src/admin/button/CnbButtonController.php:152
+#: src/admin/button/CnbButtonController.php:276
+#: src/admin/button/CnbButtonController.php:358
+#: src/admin/button/CnbButtonController.php:408
+#: src/admin/condition/CnbConditionController.php:47
+#: src/admin/condition/CnbConditionController.php:202
+#: src/admin/condition/CnbConditionController.php:251
+#: src/admin/condition/CnbConditionController.php:295
+#: src/admin/domain/CnbDomainController.php:24
+#: src/admin/domain/CnbDomainController.php:97
+#: src/admin/domain/CnbDomainController.php:161
+#: src/admin/domain/CnbDomainController.php:288
+#: src/admin/profile/CnbProfileController.php:292
+#: src/admin/settings/CnbSettingsController.php:283
+#: src/admin/settings/CnbSettingsController.php:332
+#: src/admin/settings/CnbSettingsController.php:357
+msgid "You do not have sufficient permissions to access this page."
+msgstr "You do not have sufficient permissions to access this page."
+
+#: src/admin/CnbAdminAjax.php:136 src/admin/CnbAdminAjax.php:138
+msgid "Please enter a valid e-mail address."
+msgstr "Please enter a valid email address."
+
+#: src/notices/CnbAdminNotices.php:62
+msgid "Dismissed notice"
+msgstr "Dismissed notice"
+
+#: src/CallNowButton.php:258
+msgid "Support"
+msgstr "Support"
+
+#: src/CallNowButton.php:257
+msgid "Settings"
+msgstr "Settings"
+
+#: src/CallNowButton.php:254
+msgid "My button"
+msgstr "My button"
+
+#: src/CallNowButton.php:254
+msgid "All buttons"
+msgstr "All buttons"
+
+#: src/CallNowButton.php:217
+msgid "Welcome to Call Now Button"
+msgstr "Welcome to Call Now Button"
+
+#: src/admin/settings/CnbSettingsViewEdit.php:182
+#: src/admin/settings/CnbSettingsViewEdit.php:194
+msgid "Disconnect account"
+msgstr "Disconnect account"
+
+#: src/admin/partials/CnbHeaderNotices.php:181
+msgid "Store API key"
+msgstr "Store API key"
+
+#: src/admin/partials/CnbHeaderNotices.php:165
+msgid "Create account"
+msgstr "Create account"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:249
+msgid "No domains found."
+msgstr "No domains found."
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:143
+msgid "Disabled"
+msgstr "Disabled"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:143
+msgid "Enabled"
+msgstr "Enabled"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:53
+msgid "Google Ads"
+msgstr "Google Ads"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:52
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:51
+msgid "Timezone"
+msgstr "Timezone"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:50
+msgid "Renew automatically"
+msgstr "Renew automatically"
+
+#: src/admin/domain/Cnb_Domain_List_Table.php:49
+msgid "Expires"
+msgstr "Expires"
+
+#: src/admin/domain/CnbDomainViewEdit.php:23
+msgid "Add domain"
+msgstr "Add domain"
+
+#: src/admin/domain/CnbDomainViewEdit.php:21
+msgid "Editing domain"
+msgstr "Editing domain"
+
+#: src/admin/condition/Cnb_Condition_List_Table.php:380
+msgid "No display rules found."
+msgstr "No display rules found."
+
+#: src/admin/condition/Cnb_Condition_List_Table.php:66
+msgid "Match value"
+msgstr "Match value"
+
+#: src/admin/condition/Cnb_Condition_List_Table.php:65
+msgid "Match type"
+msgstr "Match type"
+
+#: src/admin/condition/Cnb_Condition_List_Table.php:63
+msgid "Filter type"
+msgstr "Filter type"
+
+#: src/admin/condition/CnbConditionViewEdit.php:28
+msgid "Add display rule"
+msgstr "Add display rule"
+
+#: src/admin/condition/CnbConditionViewEdit.php:26
+msgid "Editing display rule"
+msgstr "Editing display rule"
+
+#: src/admin/button/Cnb_Button_List_Table.php:428
+msgid "No buttons found. "
+msgstr "No buttons found. "
+
+#: src/admin/button/Cnb_Button_List_Table.php:406
+msgid "Inactive"
+msgstr "Inactive"
+
+#: src/admin/button/Cnb_Button_List_Table.php:392
+#: src/admin/button/Cnb_Button_List_Table.php:421
+msgid "Enable"
+msgstr "Enable"
+
+#: src/admin/button/Cnb_Button_List_Table.php:390
+#: src/admin/button/Cnb_Button_List_Table.php:422
+msgid "Disable"
+msgstr "Disable"
+
+#: src/admin/button/Cnb_Button_List_Table.php:376
+#: src/admin/domain/Cnb_Domain_List_Table.php:210
+msgid "Edit"
+msgstr "Edit"
+
+#: src/admin/button/Cnb_Button_List_Table.php:122
+msgid "Active"
+msgstr "Active"
+
+#: src/admin/button/Cnb_Button_List_Table.php:121
+msgid "All"
+msgstr "All"
+
+#: src/admin/button/Cnb_Button_List_Table.php:69
+msgid "Display"
+msgstr "Display"
+
+#: src/admin/button/Cnb_Button_List_Table.php:68
+msgid "Actions"
+msgstr "Actions"
+
+#: src/admin/button/CnbButtonViewEdit.php:36
+msgid "Editing "
+msgstr "Editing "
+
+#: src/admin/button/CnbButtonView.php:61
+msgid "Let's create one!"
+msgstr "Let's create one!"
+
+#: src/admin/button/CnbButtonView.php:44 src/admin/button/CnbButtonView.php:60
+msgid "Choose a Button type"
+msgstr "Choose a Button type"
+
+#: src/admin/button/CnbButtonView.php:42 src/admin/button/CnbButtonView.php:59
+msgid "Create new button"
+msgstr "Create new button"
+
+#: src/admin/api/class-cnb-user-controller.php:33
+msgid "Invalid storage type"
+msgstr "Invalid storage type"
+
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:189
+msgid "No API keys found."
+msgstr "No API keys found."
+
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:50
+msgid "Last updated"
+msgstr "Last updated"
+
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:49
+msgid "Last used"
+msgstr "Last used"
+
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:48
+msgid "Created"
+msgstr "Created"
+
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:47
+#: src/admin/button/Cnb_Button_List_Table.php:66
+#: src/admin/domain/Cnb_Domain_List_Table.php:47
+msgid "Name"
+msgstr "Name"
+
+#: src/admin/api-key/CnbApiKeyView.php:28 src/admin/button/CnbButtonView.php:45
+msgid "Add New"
+msgstr "Add New"
+
+#: src/admin/api-key/CnbApiKeyView.php:26
+#: src/admin/api-key/CnbApiKeyView.php:27
+msgid "Create new API key"
+msgstr "Create new API key"
+
+#: src/admin/action/partials/class-action-icon-picker.php:253
+#: src/admin/button/partials/class-button-icon-picker.php:320
+msgid "Select image"
+msgstr "Select image"
+
+#: src/admin/action/Cnb_Action_List_Table.php:469
+msgid "This button has no actions yet. Let's add one!"
+msgstr "This button has no actions yet. Let's add one!"
+
+#. Description of the plugin
+#: call-now-button.php
+msgid "Shows a <strong>Call Now Button</strong> to your mobile visitors. Easy to use but flexible to meet more demanding requirements. Change placement and color, hide on specific pages, track how many people click them or conversions of your Google Ads campaigns. Create an account to enable extra actions such as <strong>WhatsApp</strong>, <strong>Messenger</strong>, <strong>Telegram</strong>, <strong>Signal</strong>, <strong>Viber</strong>, <strong>Line</strong>, <strong>WeChat</strong>, <strong>Zalo</strong>, <strong>Email</strong>, <strong>SMS</strong>, <strong>Maps</strong> and <strong>links</strong>. Also offers additional functionality such as advanced display rules, scheduling, geo rules, appear after scrolling, button animations and much more."
+msgstr "Shows a <strong>Call Now Button</strong> to your mobile visitors. Easy to use but flexible to meet more demanding requirements. Change placement and colour, hide on specific pages, track how many people click them or conversions of your Google Ads campaigns. Create an account to enable extra actions such as <strong>WhatsApp</strong>, <strong>Messenger</strong>, <strong>Telegram</strong>, <strong>Signal</strong>, <strong>Viber</strong>, <strong>Line</strong>, <strong>WeChat</strong>, <strong>Zalo</strong>, <strong>Email</strong>, <strong>SMS</strong>, <strong>Maps</strong> and <strong>links</strong>. Also offers additional functionality such as advanced display rules, scheduling, geo rules, appear after scrolling, button animations and much more."
+
+#: src/admin/action/Cnb_Action_List_Table.php:418
+#: src/admin/action/Cnb_Action_List_Table.php:429
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:184
+#: src/admin/button/Cnb_Button_List_Table.php:402
+#: src/admin/button/Cnb_Button_List_Table.php:423
+#: src/admin/condition/Cnb_Condition_List_Table.php:333
+#: src/admin/condition/Cnb_Condition_List_Table.php:344
+#: src/admin/domain/Cnb_Domain_List_Table.php:220
+#: src/admin/domain/Cnb_Domain_List_Table.php:244
+msgid "Delete"
+msgstr "Delete"
+
+#: src/admin/action/Cnb_Action_List_Table.php:365
+msgid "All day"
+msgstr "All day"
+
+#: src/admin/action/Cnb_Action_List_Table.php:327
+msgid "Weekend only"
+msgstr "Weekend only"
+
+#: src/admin/action/Cnb_Action_List_Table.php:325
+msgid "Weekdays only"
+msgstr "Weekdays only"
+
+#: src/admin/action/Cnb_Action_List_Table.php:314
+msgid "No days"
+msgstr "No days"
+
+#: src/admin/action/Cnb_Action_List_Table.php:311
+msgid "All days"
+msgstr "All days"
+
+#: src/admin/action/Cnb_Action_List_Table.php:299
+msgid "Always visible"
+msgstr "Always visible"
+
+#: src/admin/action/Cnb_Action_List_Table.php:81
+#: src/admin/condition/Cnb_Condition_List_Table.php:75
+msgid "Button"
+msgstr "Button"
+
+#: src/admin/action/Cnb_Action_List_Table.php:68
+msgid "Schedule"
+msgstr "Schedule"
+
+#: src/admin/action/Cnb_Action_List_Table.php:67
+msgid "Label"
+msgstr "Label"
+
+#: src/admin/action/Cnb_Action_List_Table.php:66
+msgid "Value"
+msgstr "Value"
+
+#: src/admin/action/Cnb_Action_List_Table.php:65
+#: src/admin/button/Cnb_Button_List_Table.php:67
+#: src/admin/condition/Cnb_Condition_List_Table.php:64
+#: src/admin/domain/Cnb_Domain_List_Table.php:48
+msgid "Type"
+msgstr "Type"
+
+#: src/admin/action/Cnb_Action_List_Table.php:64
+#: src/admin/api-key/Cnb_Apikey_List_Table.php:46
+#: src/admin/button/Cnb_Button_List_Table.php:65
+#: src/admin/condition/Cnb_Condition_List_Table.php:62
+#: src/admin/domain/Cnb_Domain_List_Table.php:46
+msgid "ID"
+msgstr "ID"
+
+#: src/admin/action/CnbActionViewEdit.php:39
+msgid "Add action"
+msgstr "Add action"
+
+#: src/admin/action/CnbActionViewEdit.php:37
+msgid "Editing action"
+msgstr "Editing action"
+
+#: src/admin/action/CnbActionViewEdit.php:27
+msgid "An error occurred"
+msgstr "An error occurred"
+
+#: src/admin/action/CnbActionController.php:361
+#: src/admin/api-key/CnbApiKeyController.php:260
+#: src/admin/condition/CnbConditionController.php:338
+#: src/admin/domain/CnbDomainController.php:204
+msgid "Cannot process Bulk action"
+msgstr "Cannot process Bulk action"
+
+#: src/admin/action/CnbActionController.php:360
+#: src/admin/api-key/CnbApiKeyController.php:259
+#: src/admin/condition/CnbConditionController.php:337
+#: src/admin/domain/CnbDomainController.php:203
+msgid "Unknown Bulk action specified"
+msgstr "Unknown Bulk action specified"
+
+#: src/admin/action/CnbActionController.php:91
+#: src/admin/action/CnbActionController.php:208
+#: src/admin/action/CnbActionController.php:291
+#: src/admin/action/CnbActionController.php:373
+#: src/admin/api-key/CnbApiKeyController.php:66
+#: src/admin/api-key/CnbApiKeyController.php:92
+#: src/admin/api-key/CnbApiKeyController.php:191
+#: src/admin/api-key/CnbApiKeyController.php:272
+#: src/admin/button/CnbButtonController.php:247
+#: src/admin/button/CnbButtonController.php:340
+#: src/admin/button/CnbButtonController.php:389
+#: src/admin/button/CnbButtonController.php:420
+#: src/admin/condition/CnbConditionController.php:59
+#: src/admin/condition/CnbConditionController.php:186
+#: src/admin/condition/CnbConditionController.php:350
+#: src/admin/domain/CnbDomainController.php:85
+#: src/admin/domain/CnbDomainController.php:134
+#: src/admin/domain/CnbDomainController.php:216
+#: src/admin/domain/CnbDomainController.php:300
+#: src/admin/profile/CnbProfileController.php:338
+msgid "Error"
+msgstr "Error"
+
+#: src/admin/action/CnbActionController.php:91
+#: src/admin/action/CnbActionController.php:208
+#: src/admin/action/CnbActionController.php:291
+#: src/admin/action/CnbActionController.php:372
+#: src/admin/api-key/CnbApiKeyController.php:66
+#: src/admin/api-key/CnbApiKeyController.php:92
+#: src/admin/api-key/CnbApiKeyController.php:191
+#: src/admin/api-key/CnbApiKeyController.php:271
+#: src/admin/button/CnbButtonController.php:247
+#: src/admin/button/CnbButtonController.php:339
+#: src/admin/button/CnbButtonController.php:389
+#: src/admin/button/CnbButtonController.php:420
+#: src/admin/condition/CnbConditionController.php:59
+#: src/admin/condition/CnbConditionController.php:186
+#: src/admin/condition/CnbConditionController.php:349
+#: src/admin/domain/CnbDomainController.php:85
+#: src/admin/domain/CnbDomainController.php:134
+#: src/admin/domain/CnbDomainController.php:215
+#: src/admin/domain/CnbDomainController.php:300
+#: src/admin/profile/CnbProfileController.php:338
+msgid "Invalid nonce specified"
+msgstr "Invalid nonce specified"
+
+#. Author URI of the plugin
+#: call-now-button.php
+msgid "https://nowbuttons.com"
+msgstr "https://nowbuttons.com"
+
+#. Author of the plugin
+#: call-now-button.php
+msgid "NowButtons.com"
+msgstr "NowButtons.com"
+
+#. Plugin URI of the plugin
+#: call-now-button.php
+msgid "https://callnowbutton.com"
+msgstr "https://callnowbutton.com"
+
+#. Plugin Name of the plugin
+#: call-now-button.php src/CallNowButton.php:218
+msgid "Call Now Button"
+msgstr "Call Now Button"

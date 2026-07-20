@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="animalshelter">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/animalshelter/animalshelter.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

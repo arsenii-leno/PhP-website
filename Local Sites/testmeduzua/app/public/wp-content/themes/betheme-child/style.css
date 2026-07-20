@@ -1,0 +1,75 @@
+/*
+Theme Name: Betheme Child
+Theme URI: https://themes.muffingroup.com/betheme
+Author: Muffin group
+Author URI: https://muffingroup.com
+Description: Child Theme for Betheme. Managed with professional refactoring pipeline.
+Template: betheme
+Version: 1.6.2
+*/
+
+/* ==========================================================================
+   1. GLOBAL VARIABLES & VARIABLES OVERRIDES
+   ========================================================================== */
+:root {
+    --primary-color: #0073aa; /* Стандартний синій, змініть під брендбук клініки */
+    --success-color: #46b450;
+    --danger-color:  #dc3232;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+/* ==========================================================================
+   2. GENERAL OVERRIDES & FIXES (Theme-wide)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   3. PLUGINS OVERRIDES (Наші кастомні виправлення плагінів)
+   ========================================================================== */
+
+/* --- 3.1. YourChannel (YouTube Gallery) Fixes --- */
+.yourchannel-container .yrc-item {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    margin-bottom: 25px !important;
+}
+
+/* Обмежуємо висоту заголовків, щоб сітка не "стрибала" через різну довжину тексту */
+.yourchannel-container .yrc-title {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    max-height: 2.8em !important; /* Висота рівно на 2 рядки */
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important; /* Обрізаємо після другого рядка */
+    -webkit-box-orient: vertical !important;
+    margin-top: 10px !important;
+}
+
+/* Додаємо сучасний радіус заокруглення для прев'ю відео */
+.yourchannel-container .yrc-video-thumb,
+.yourchannel-container iframe {
+    border-radius: var(--border-radius) !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05) !important;
+    transition: transform var(--transition-speed) ease !important;
+}
+
+/* Легкий ефект при наведенні */
+.yourchannel-container .yrc-video-thumb:hover {
+    transform: translateY(-3px);
+}
+
+/* --- 3.2. WooCommerce Overrides (Буде заповнено під час рефакторингу кошика) --- */
+
+
+/* ==========================================================================
+   4. RESPONSIVE DESIGN (Адаптивність для мобілок)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Тут будуть фікси відображення кнопок зв'язку та мобільних меню */
+}

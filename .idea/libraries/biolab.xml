@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="biolab">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/__MACOSX/biolab/._biolab-content2.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/__MACOSX/biolab/._biolab-content.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

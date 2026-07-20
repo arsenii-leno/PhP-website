@@ -1,0 +1,420 @@
+@import "compass";
+$desktop : 770px;
+$tablet : 769px;
+$mobile : 600px;
+$sm 	: 736px;
+
+@font-face {
+  font-family: 'floatton-icons';
+
+  src: url('../fonts/fontello.eot?13176366');
+  src: url('../fonts/fontello.eot?13176366#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff2?13176366') format('woff2'),
+       url('../fonts/fontello.woff?13176366') format('woff'),
+       url('../fonts/fontello.ttf?13176366') format('truetype'),
+       url('../fonts/fontello.svg?13176366#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+button.floatton-btn{
+	position: fixed;
+	// display: none;
+	bottom: 0px;
+	top: auto;
+	outline:none;
+  border: 0px;
+	// right: 40px;
+	z-index: 9999;
+	font-size: 15px;
+    line-height: 20px;
+    padding: 10px 16px;
+    margin: 0px 0px -50px;
+    // @include opacity(1);
+    @include border-radius( 999rem );
+    cursor: pointer;
+    .dashicons{
+    	float: left;
+    	margin-right: 4px;
+    	font-size: 22px;
+    	line-height: 20px;
+    	&, &:before{
+    		width: auto;
+    		height: auto;
+    		// vertical-align: middle;
+    	}
+    	&.no-icon{
+    		display: none;
+    	}
+    }
+    &:focus{
+    	outline: none;
+    	border: 0px;
+    	@include box-shadow(none);
+    }
+    &.floatton-btn-icon-only{
+    	@include border-radius( 50% );
+    	height: 50px;
+    	width: 50px;
+    	padding: 0px;
+    	text-align: center;
+    	span{
+    		float: none;
+    		padding: 0px;
+    		margin: 0px;
+    	}
+    }
+    @media screen and (max-width: $mobile) {
+		&:not(.floatton-btn-no-icon){
+			@include border-radius( 50% );
+	    	height: 48px;
+	    	width: 48px;
+	    	padding: 0px;
+	    	text-align: center;
+	    	span{
+	    		float: none;
+	    		padding: 0px;
+	    		margin: 0px;
+	    	}
+			.floatton-btn-label{
+				display: none;
+			}
+			.dashicons{
+				font-size: 25px;
+				line-height: 48px;
+			}
+		}
+    }
+    @media screen and (min-width: $desktop) {
+    	&.floatton-hide-lg{
+    		display: none;
+    	}
+    }
+
+    @media screen and (max-width: $tablet)
+	and (min-width: $sm + 1) {
+		&.floatton-hide-lg, &.floatton-hide-sm{
+    		display: block;
+    	}
+		&.floatton-hide-md{
+    		display: none;
+    	}
+	}
+
+    @media screen and (max-width: $sm) {
+    	&.floatton-hide-lg,&.floatton-hide-md{
+    		display: block;
+    	}
+    	&.floatton-hide-sm{
+    		display: none;
+    	}
+    }
+
+}
+body{
+	.floatton-container{
+		max-width: 94%;
+		max-height: 95%;
+		width: 500px;
+		display: none;
+		position: fixed;
+		background: #fff;
+		border: 1px solid #2980b9;
+		z-index: 999;
+		@include border-radius( 3px );
+		padding: 20px 16px;
+		margin: 0px 16px -20px;
+		@include box-shadow( 0px 1px 7px 1px rgba( #000, 0.15 ) );
+		@include transform( translateZ(0px) );
+		@include opacity(0);
+
+		.floatton-pointer{
+			content: "";
+		    width:0px;
+		    height:0px;
+		    border-left:12px solid transparent;
+		    border-right:12px solid transparent;
+		    border-top:12px solid #2980b9;
+		    position:absolute;
+		    bottom:-12px;
+		    right: 10px;
+		    left: auto;
+		    margin-left: -12px;
+		}
+		&.floatton-pos-left{
+			.floatton-pointer{
+				right: auto;
+				left: 22px;
+			}
+		}
+		.floatton-close{
+			// font-family: 'floatton-icons';
+			font-size: 25px;
+		    position: absolute;
+		    line-height: 24px;
+		    height: 30px;
+		    width: 30px;
+		    color: #fff;
+		    background-color: #2980b9;
+		    top: -15px;
+    		right: -15px;
+    		z-index: 101;
+    		cursor:pointer;
+    		@include border-radius(50%);
+			&:before{
+				height: 30px;
+			    width: 30px;
+			    line-height: 25px;
+			    text-align: center;
+			    vertical-align: middle;
+			}
+			&:hover{
+				cursor: pointer;
+				color: #fff;
+				background-color: #c3251d;
+			}
+		}
+		&.floatton-no-message{
+			// text-align: center;
+			.floatton-success{
+				text-align: center;
+			}
+		}
+		.floatton-success{
+			display: none;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			background-color: #fff;
+			z-index: 100;
+			padding: 20px 16px;
+			.floatton-success-icons{
+				display: block;
+				font-size: 160px;
+				line-height: 90px;
+				width: auto;
+				height: 90px;
+				color: #27ae60;
+			}
+			.floatton-success-inner{
+				display: table;
+				height: 100%;
+				width: 100%;
+			}
+			.floatton-success-content{
+				display: table-cell;
+    			vertical-align: middle;
+			}
+		}
+		.floatton-inner{
+			overflow-y: auto;
+			overflow-x: hidden;
+			// -webkit-overflow-scrolling: touch;
+			// max-height: 300px;
+			margin-right: -27px;
+			padding-right: 27px;
+			@include box-sizing( border-box );
+
+			&.floatton-scroller{
+				padding-right: 22px;
+			}
+
+			&::-webkit-scrollbar {
+				-webkit-appearance: none;
+			    box-shadow: none;
+			    width: 5px;
+			}
+			&::-webkit-scrollbar-thumb{
+				background: rgba( 0,0,0, 0.5 );
+    			@include border-radius( .25rem );
+			}
+			&::-webkit-scrollbar-track{
+				margin: 1.25rem 0;
+			}
+			.comment-reply-title, .comment-form, p{
+				padding: 0px;
+				border: 0px;
+			}
+			.comment-reply-title, p{
+				margin: 0px 0px 7px 0px;
+			}
+			.comment-reply-title{
+				padding-right: 20px;
+				font-size: 22px;
+    			line-height: 27px;
+			}
+			&,p{
+				font-size: 13px;
+				line-height: 1.65;
+    			// line-height: 19px;
+			}
+			img{
+				max-width: 100%;
+				padding: 0px;
+				margin-bottom: 7px;
+			}
+			input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"]{
+				font-size: 13px;
+				line-height: 25px;
+				padding: 5px 12px 3px;
+	    		width: 100%;
+	    		background: transparent;
+	    		clear: both;
+	    		margin: 0px;
+	    		border: 1px solid #d1d1d1;
+	    		color: #686868;
+	    		@include border-radius(2px);
+	    		&:focus{
+	    			border-color: #2980b9;
+	    			color: #000;
+	    		}
+			}
+			textarea{
+				font-size: 13px;
+				padding: 5px 12px 3px;
+	    		width: 100%;
+	    		background: transparent;
+	    		clear: both;
+	    		max-height: 80px;
+	    		margin: 0px;
+	    		border: 1px solid #d1d1d1;
+	    		color: #686868;
+	    		@include border-radius(2px);
+	    		&:focus{
+	    			border-color: #2980b9;
+	    			color: #000;
+	    		}
+			}
+			@media screen and (-webkit-min-device-pixel-ratio:0) {
+				select,
+				textarea,
+				input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"]{
+					&, &:focus{
+						font-size: 16px;
+					}
+				}
+			}
+			.floatton-req{
+				border-color: #c0392b !important;
+			}
+			label{
+				position: relative;
+				margin: 0px 0px -8px 6px;
+				text-transform: uppercase;
+				font-size: 10px;
+				font-weight: 600;
+				line-height: 10px;
+				z-index: 99;
+				background: #fff;
+				padding: 2px;
+				float: left;
+			}
+			input[type="submit"], button[type="submit"]{
+				float: right;
+				padding: 12px 17px;
+			    font-size: 15px;
+			    font-weight: 400;
+			    margin: 0px 0px 5px !important;
+			    color: #fff;
+			    border: 0px;
+			    background-color: #333;
+			    @include border-radius(2px);
+			    &:hover{
+			    	background-color: #2980b9;
+			    }
+			}
+			.comment-form{
+				br{
+					content: "";
+					max-height: 1px;
+					display: block;
+					clear: both;
+				}
+			}
+
+			//ratings
+			.floatton-ratings{
+				display: block;
+				clear: both;
+				text-align: center;
+				.dashicons{
+					font-weight:normal;
+				    font-style:normal;
+				    color: #ffb900;
+				    font-size: 50px;
+				    line-height: 60px;
+    				width: auto;
+    				height: auto;
+    				padding: 0px 5px;
+    				margin: 0px -5px 0px;
+				    @include inline-block;
+				    &:hover{
+				    	cursor:pointer;
+				    }
+				}
+			}
+
+			//errors
+			.floatton-errors{
+				display: block;
+				clear: both;
+				&, p, ul, li, span{
+					padding: 0px !important;
+					margin: 0px !important;
+				}
+				.floatton-error{
+				    background-color: #f2dede;
+				    padding: 5px;
+				    margin: 0px 0px 5px;
+				    border: 1px solid #ebccd1;
+				    display: block;
+				    max-width: 100%;
+				    @include border-radius(2px);
+				    &,p{
+				    	color: #a94442;
+						font-size: 12px;
+				    	line-height: 15px;
+				    }
+				}
+			}
+		}
+		//loading
+		.floatton-loading{
+			line-height: 25px;
+			font-family: 'floatton-icons';
+			font-weight:normal;
+		    font-style:normal;
+		    font-size: 34px;
+		    line-height: 10px;
+			color: #2980b9;
+			display: none;
+			position: absolute;
+			bottom: 5px;
+			left: 15px;
+		    span{
+		    	@include inline-block;
+		    	-webkit-animation: floatton-flash 3s ease infinite;
+		    	animation: floatton-flash 3s ease infinite;
+		    }
+		    .floatton-dot-1:before{
+		    	content:"\e80a";
+		    }
+		    .floatton-dot-2:before{
+		    	content:"\e80b";
+		    }
+		    .floatton-dot-3:before{
+		    	content:"\e80c";
+		    }
+		}
+
+		@media screen and (max-width: $mobile) {
+			left: 0px !important;
+			width: auto;
+		}
+	}
+}
+@-webkit-keyframes floatton-flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}
+@keyframes floatton-flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}

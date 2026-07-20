@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hiphop">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/themes/betheme/functions/importer/demo/be/hiphop/hiphop.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

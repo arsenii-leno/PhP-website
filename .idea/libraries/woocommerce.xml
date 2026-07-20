@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="woocommerce">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/wp-content/languages/woocommerce/woocommerce-5.2.2-uk.zip!/" />
+      <root url="jar://$PROJECT_DIR$/wp-content/languages/woocommerce/woocommerce-5.2.2-ru_RU.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
