@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="mockup">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/mockup/mockup.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

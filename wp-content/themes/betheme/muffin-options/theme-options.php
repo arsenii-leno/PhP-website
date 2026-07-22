@@ -5879,14 +5879,29 @@ mfn_opts_setup();
 
 
 /**
- * This is used to return option value from the options array
+ * Safe wrapper to return option value from the options array.
+ * Re-engineered for full compatibility with PHP 8.2+.
  */
-if( ! function_exists( 'mfn_opts_get' ) )
+if ( ! function_exists( 'mfn_opts_get' ) )
 {
-	function mfn_opts_get( $opt_name, $default = null ){
-		global $MFN_Options;
-		return $MFN_Options->get( $opt_name, $default );
-	}
+    function mfn_opts_get( string $opt_name, mixed $default = null ): mixed
+    {
+        global $MFN_Options;
+
+        // Захист №1: Якщо глобальний клас теми ще не піднявся або поламаний
+        if ( ! is_object( $MFN_Options ) || ! method_exists( $MFN_Options, 'get' ) ) {
+            return $default;
+        }
+
+        $value = $MFN_Options->get( $opt_name, $default );
+
+        // Захист №2: Якщо метод теми повернув false/null/порожній рядок замість реального значення
+        if ( $value === false || $value === null || $value === '' ) {
+            return $default;
+        }
+
+        return $value;
+    }
 }
 
 

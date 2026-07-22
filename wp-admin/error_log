@@ -1,0 +1,235 @@
+[21-Jul-2026 15:41:58 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[21-Jul-2026 16:17:26 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[21-Jul-2026 18:13:00 UTC] PHP Fatal error:  Uncaught kirillbdev\WCUkrShipping\Exceptions\SmartyParcel\SmartyParcelErrorException: Client must be authenticated to access this resource. in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Api/SmartyParcelWPApi.php:116
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Api/SmartyParcelWPApi.php(92): kirillbdev\WCUkrShipping\Api\SmartyParcelWPApi->processResponse(Array)
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Component/Shipping/SmartyParcelPUDOProvider.php(28): kirillbdev\WCUkrShipping\Api\SmartyParcelWPApi->sendRequest('/v1/locator/cit...', NULL, Array)
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Http/Controllers/AddressController.php(52): kirillbdev\WCUkrShipping\Component\Shipping\SmartyParcelPUDOProvider->searchCitiesByQuery('\xD0\xA3\xD0\xB6\xD0\xB3')
+#3 [internal function]: kirillbdev\WCUkrShipping\Http\Controllers\AddressController->searchCities(Object(kirillbdev\WCUSCore\Http\Request))
+#4 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/vendor/kirillbdev/wcus-core/src/Http/Routing/Route.php(63): call_user_func(Array, Object(kirillbdev\WCUSCore\Http\Request))
+#5 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/vendor/kirillbdev/wcus-core/src/Http/Routing/Router.php(35): kirillbdev\WCUSCore\Http\Routing\Route->dispatch(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): kirillbdev\WCUSCore\Http\Routing\Router->dispatchAction('')
+#7 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#8 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#9 /home/a49718/public_html/med.uz.ua/wp-admin/admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#10 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Api/SmartyParcelWPApi.php on line 116
+[21-Jul-2026 18:13:03 UTC] PHP Fatal error:  Uncaught kirillbdev\WCUkrShipping\Exceptions\SmartyParcel\SmartyParcelErrorException: Client must be authenticated to access this resource. in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Api/SmartyParcelWPApi.php:116
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Api/SmartyParcelWPApi.php(92): kirillbdev\WCUkrShipping\Api\SmartyParcelWPApi->processResponse(Array)
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Component/Shipping/SmartyParcelPUDOProvider.php(28): kirillbdev\WCUkrShipping\Api\SmartyParcelWPApi->sendRequest('/v1/locator/cit...', NULL, Array)
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Http/Controllers/AddressController.php(52): kirillbdev\WCUkrShipping\Component\Shipping\SmartyParcelPUDOProvider->searchCitiesByQuery('\xD0\xA3\xD0\xB6\xD0\xB3\xD0\xBE\xD1\x80\xD0\xBE\xD0\xB4')
+#3 [internal function]: kirillbdev\WCUkrShipping\Http\Controllers\AddressController->searchCities(Object(kirillbdev\WCUSCore\Http\Request))
+#4 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/vendor/kirillbdev/wcus-core/src/Http/Routing/Route.php(63): call_user_func(Array, Object(kirillbdev\WCUSCore\Http\Request))
+#5 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/vendor/kirillbdev/wcus-core/src/Http/Routing/Router.php(35): kirillbdev\WCUSCore\Http\Routing\Route->dispatch(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): kirillbdev\WCUSCore\Http\Routing\Router->dispatchAction('')
+#7 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#8 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#9 /home/a49718/public_html/med.uz.ua/wp-admin/admin-ajax.php(207): do_action('wp_ajax_nopriv_...')
+#10 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wc-ukr-shipping/src/Api/SmartyParcelWPApi.php on line 116
+[21-Jul-2026 18:45:18 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[21-Jul-2026 19:35:18 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[21-Jul-2026 19:41:01 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[21-Jul-2026 21:38:17 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[21-Jul-2026 21:56:30 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 00:31:03 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 00:40:38 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 01:28:53 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 01:57:36 UTC] PHP Deprecated:  Creation of dynamic property RevSliderUpdate::$data is deprecated in /home/a49718/public_html/med.uz.ua/wp-content/plugins/revslider-off/includes/update.class.php on line 91
+[22-Jul-2026 01:57:41 UTC] PHP Deprecated:  Creation of dynamic property RevSliderUpdate::$data is deprecated in /home/a49718/public_html/med.uz.ua/wp-content/plugins/revslider-off/includes/update.class.php on line 91
+[22-Jul-2026 03:30:50 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 04:22:58 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 04:49:01 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 07:47:48 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:30:41 UTC] PHP Warning:  The magic method Vc_Manager::__wakeup() must have public visibility in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/js_composer.php on line 221
+[22-Jul-2026 08:30:52 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:30:59 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:31:02 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:31:47 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:32:15 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:32:20 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:32:23 UTC] PHP Fatal error:  Uncaught Error: Attempt to assign property "licence_account" on null in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php:216
+Stack trace:
+#0 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(238): WP_Rocket\Admin\Settings\Page->get_customer_data()
+#1 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(380): WP_Rocket\Admin\Settings\Page->customer_data()
+#2 /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php(167): WP_Rocket\Admin\Settings\Page->dashboard_section()
+#3 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(341): WP_Rocket\Admin\Settings\Page->render_page('')
+#4 /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-hook.php(365): WP_Hook->apply_filters('', Array)
+#5 /home/a49718/public_html/med.uz.ua/wp-includes/plugin.php(522): WP_Hook->do_action(Array)
+#6 /home/a49718/public_html/med.uz.ua/wp-admin/admin.php(264): do_action('settings_page_w...')
+#7 /home/a49718/public_html/med.uz.ua/wp-admin/options-general.php(10): require_once('/home/a49718/pu...')
+#8 {main}
+  thrown in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-rocket/inc/classes/admin/settings/class-page.php on line 216
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$plugin in /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-list-util.php on line 168
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$plugin in /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-list-util.php on line 168
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:39:59 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$plugin in /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-list-util.php on line 168
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$plugin in /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-list-util.php on line 168
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:06 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:40:07 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$plugin in /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-list-util.php on line 168
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$plugin in /home/a49718/public_html/med.uz.ua/wp-includes/class-wp-list-util.php on line 168
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:46 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:56:47 UTC] PHP Warning:  Undefined property: stdClass::$slug in /home/a49718/public_html/med.uz.ua/wp-admin/includes/plugin-install.php on line 455
+[22-Jul-2026 08:57:37 UTC] PHP Warning:  Undefined array key "Name" in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/include/classes/updaters/class-vc-updater.php on line 114
+[22-Jul-2026 08:57:41 UTC] PHP Warning:  Undefined array key "Name" in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/include/classes/updaters/class-vc-updater.php on line 114
+[22-Jul-2026 09:33:15 UTC] PHP Warning:  simplexml_load_string(): Entity: line 1: parser error : Start tag expected, '&lt;' not found in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-meta-seo/inc/class.metaseo-dashboard.php on line 739
+[22-Jul-2026 09:33:15 UTC] PHP Warning:  simplexml_load_string(): Non-secure HTTP protocol was used. Please use HTTPS instead.  in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-meta-seo/inc/class.metaseo-dashboard.php on line 739
+[22-Jul-2026 09:33:15 UTC] PHP Warning:  simplexml_load_string(): ^ in /home/a49718/public_html/med.uz.ua/wp-content/plugins/wp-meta-seo/inc/class.metaseo-dashboard.php on line 739
+[22-Jul-2026 09:37:49 UTC] PHP Warning:  include(/home/a49718/public_html/med.uz.ua/wp-content/languages/plugins/tinymce-advanced-uk.l10n.php): Failed to open stream: No such file or directory in /home/a49718/public_html/med.uz.ua/wp-includes/l10n.php on line 1682
+[22-Jul-2026 09:37:49 UTC] PHP Warning:  include(): Failed opening '/home/a49718/public_html/med.uz.ua/wp-content/languages/plugins/tinymce-advanced-uk.l10n.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home/a49718/public_html/med.uz.ua/wp-includes/l10n.php on line 1682
+[22-Jul-2026 09:39:08 UTC] PHP Warning:  include(/home/a49718/public_html/med.uz.ua/wp-content/languages/plugins/better-search-replace-uk.l10n.php): Failed to open stream: No such file or directory in /home/a49718/public_html/med.uz.ua/wp-includes/l10n.php on line 1682
+[22-Jul-2026 09:39:08 UTC] PHP Warning:  include(): Failed opening '/home/a49718/public_html/med.uz.ua/wp-content/languages/plugins/better-search-replace-uk.l10n.php' for inclusion (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home/a49718/public_html/med.uz.ua/wp-includes/l10n.php on line 1682
+[22-Jul-2026 09:39:44 UTC] PHP Warning:  Undefined array key "Name" in /home/a49718/public_html/med.uz.ua/wp-content/plugins/js_composer/include/classes/updaters/class-vc-updater.php on line 114
+[22-Jul-2026 09:39:44 UTC] PHP Warning:  unlink(/tmp/download-I13UOB.tmp): No such file or directory in /home/a49718/public_html/med.uz.ua/wp-admin/includes/class-wp-upgrader.php on line 390

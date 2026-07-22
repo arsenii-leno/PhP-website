@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="perfume">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/perfume/perfume.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

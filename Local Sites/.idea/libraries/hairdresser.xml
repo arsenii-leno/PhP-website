@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="hairdresser">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/hairdresser/hairdresser.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

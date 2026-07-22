@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="hotel">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/hotel/hotel.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

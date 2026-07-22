@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="technics">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/testmeduzua/app/public/wp-content/themes/betheme/functions/importer/demo/be/technics/technics.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -1,0 +1,2 @@
+2026-07-19T09:45:22+00:00 INFO Email "new_order" for order #1513 sent CONTEXT: {"email_type":"new_order","status":"sent","recipient":"guest","order":1513}
+2026-07-19T09:45:22+00:00 INFO Email "customer_processing_order" for order #1513 sent CONTEXT: {"email_type":"customer_processing_order","status":"sent","recipient":"meduzua","order":1513}

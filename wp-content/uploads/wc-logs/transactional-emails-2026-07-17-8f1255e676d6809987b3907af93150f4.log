@@ -1,0 +1,9 @@
+2026-07-17T05:30:45+00:00 INFO Email "new_order" for order #1481 sent CONTEXT: {"email_type":"new_order","status":"sent","recipient":"guest","order":1481}
+2026-07-17T05:30:45+00:00 INFO Email "customer_processing_order" for order #1481 sent CONTEXT: {"email_type":"customer_processing_order","status":"sent","recipient":"Arsenii","order":1481}
+2026-07-17T05:35:13+00:00 INFO Email "new_order" for order #1482 sent CONTEXT: {"email_type":"new_order","status":"sent","recipient":"guest","order":1482}
+2026-07-17T05:35:13+00:00 INFO Email "customer_processing_order" for order #1482 sent CONTEXT: {"email_type":"customer_processing_order","status":"sent","recipient":"Arsenii","order":1482}
+2026-07-17T06:48:28+00:00 INFO Email "new_order" for order #1483 sent CONTEXT: {"email_type":"new_order","status":"sent","recipient":"guest","order":1483}
+2026-07-17T06:48:28+00:00 INFO Email "customer_on_hold_order" for order #1483 sent CONTEXT: {"email_type":"customer_on_hold_order","status":"sent","recipient":"Arsenii","order":1483}
+2026-07-17T07:41:01+00:00 INFO Email "admin_payment_gateway_enabled" sent CONTEXT: {"email_type":"admin_payment_gateway_enabled","status":"sent","recipient":"guest","WC_Gateway_Kmnd_Liqpay":null}
+2026-07-17T07:45:33+00:00 INFO Email "new_order" for order #1485 sent CONTEXT: {"email_type":"new_order","status":"sent","recipient":"guest","order":1485}
+2026-07-17T07:45:33+00:00 INFO Email "customer_processing_order" for order #1485 sent CONTEXT: {"email_type":"customer_processing_order","status":"sent","recipient":"Arsenii","order":1485}

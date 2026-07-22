@@ -97,8 +97,8 @@ if( ! function_exists( 'mfn_add_image_size' ) )
 			$archivesW = mfn_opts_get( 'featured-blog-portfolio-width', 960 );
 			$archivesH = mfn_opts_get( 'featured-blog-portfolio-height', 750 );
 
-			$archivesC = mfn_opts_get( 'featured-blog-portfolio-crop', 'crop' );
-			$archivesC = ( $archivesC == 'resize' ) ? false : true;
+        $archivesC = mfn_opts_get( 'featured-blog-portfolio-crop', 'crop' ) ?? 'crop';
+        $archivesC = ( (string)$archivesC === 'resize' ) ? false : true;
 
 			add_image_size( 'blog-portfolio', $archivesW, $archivesH, $archivesC );
 
@@ -108,8 +108,8 @@ if( ! function_exists( 'mfn_add_image_size' ) )
 			$singleW = mfn_opts_get( 'featured-single-width', 1200 );
 			$singleH = mfn_opts_get( 'featured-single-height', 480 );
 
-			$singleC = mfn_opts_get( 'featured-single-crop', 'crop' );
-			$singleC = ( $singleC == 'resize' ) ? false : true;
+        $singleC = mfn_opts_get( 'featured-single-crop', 'crop' ) ?? 'crop';
+        $singleC = ( (string)$singleC === 'resize' ) ? false : true;
 
 			add_image_size( 'blog-single', $singleW, $singleH, $singleC );
 
@@ -335,8 +335,7 @@ if( ! function_exists( 'mfn_ID' ) )
 				// WooCommerce
 
 				// WC < 2.7 backward compatibility
-				if( version_compare( WC_VERSION, '2.7', '<' ) ){
-					$postID = woocommerce_get_page_id( 'shop' );
+                if( defined('WC_VERSION') && version_compare( WC_VERSION, '2.7', '<' ) ){					$postID = woocommerce_get_page_id( 'shop' );
 				} else {
 					$postID = wc_get_page_id( 'shop' );
 				}
@@ -2254,9 +2253,9 @@ function mfn_is_registered(){
  * --------------------------------------------------------------------------- */
 function mfn_get_purchase_code(){
 
-	if( mfn_is_hosted() ){
-		return SUBSCRIPTION_CODE;
-	}
+    if( mfn_is_hosted() && defined('SUBSCRIPTION_CODE') ){
+        return SUBSCRIPTION_CODE;
+    }
 
 	return get_site_option( 'betheme_purchase_code' );
 }
