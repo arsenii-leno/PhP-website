@@ -132,17 +132,3 @@ function dequeue_smooth_scroll() {
     wp_deregister_script( 'smoothscroll' );
 }
 
-// functions.php у Betheme Child Theme
-function my_child_theme_enqueue_styles() {
-    // Основний стиль батьківської теми (Betheme)
-    wp_enqueue_style( 'betheme-style', get_template_directory_uri() . '/style.css' );
-    
-    // Стилі дочірньої теми з автоматичним версіонуванням
-    $child_css_version = filemtime( get_stylesheet_directory() . '/style.css' );
-    wp_enqueue_style( 'child-style', 
-        get_stylesheet_directory_uri() . '/style.css', 
-        array('betheme-style'), 
-        $child_css_version 
-    );
-}
-add_action( 'wp_enqueue_scripts', 'my_child_theme_enqueue_styles', 100 );
