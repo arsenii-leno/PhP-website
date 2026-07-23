@@ -1,0 +1,45 @@
+name: Deploy Website to Fornex via FTP
+
+on:
+  push:
+    branches:
+      - eye-clinic-site
+
+# Забороняємо паралельні деплої
+concurrency:
+  group: production-deploy
+  cancel-in-progress: true
+
+jobs:
+  web-deploy:
+    name: 🚀 Deploy WordPress to Fornex
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Checkout repository
+        uses: actions/checkout@v4
+
+      - name: 📂 Sync files via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          # FTP user вже прив'язаний до:
+          # /home/a49718/public_html/med.uz.ua/
+          server-dir: ./
+
+          # Захист production файлів
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.idea/**
+            **/.junie/**
+            **/node_modules/**
+            **/.DS_Store
+            **/.well-known/**
+            error_log
+            wp-config.php
+            wp-content/uploads/**
+            wp-content/cache/**
