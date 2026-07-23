@@ -5,7 +5,7 @@ on:
     branches:
       - eye-clinic-site
 
-# Забороняємо паралельні деплої (Race condition protection)
+# Забороняємо паралельні деплої (Race condition protection))
 concurrency:
   group: production-deploy
   cancel-in-progress: true
