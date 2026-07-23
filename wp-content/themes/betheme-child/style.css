@@ -837,6 +837,30 @@ body[class*="catalog"] div[class*="cnb-bottom"] {
     display: none !important;
 }
 
+/* Приховуємо системні поля адреси, залишаючи їх у DOM для логіки WooCommerce та плагінів доставки */
+#billing_city_field,
+#billing_state_field,
+#billing_country_field,
+#billing_address_1_field,
+#billing_address_2_field,
+#billing_postcode_field,
+#billing_company_field {
+  display: none !important;
+}
+
+/* Повне знищення блоку доставки та тексту пункту призначення ВИКЛЮЧНО на сторінці кошика */
+body.woocommerce-cart .cart_totals table.shop_table tr.woocommerce-shipping-totals,
+body.woocommerce-cart p.woocommerce-shipping-destination {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+
 /* ==========================================================================
    09. COMPONENTS & UI ELEMENTS (GENERAL)
    ========================================================================== */
@@ -2371,6 +2395,41 @@ body.woocommerce-checkout {
       }
     }
   }
+}
+
+/* Оформлення кастомних випадаючих списків Нової Пошти на Checkout */
+.wcus-checkout-np-fields .zen-ui-select {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important; /* Колір рамки, як у стандартних полів */
+  border-radius: 4px !important; /* Легке заокруглення */
+  padding: 12px 15px !important; /* Внутрішні відступи для дихання */
+  min-height: 48px !important; /* Висота для зручного натискання на мобільних */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  margin-bottom: 10px !important; /* Відступ між селектами */
+  cursor: pointer !important;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.02) !important; /* Легка внутрішня тінь для об'єму */
+}
+
+/* Стилізація тексту всередині випадаючого списку */
+.wcus-checkout-np-fields .zen-ui-select_value {
+  color: #555555 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+/* Стилізація іконки стрілочки */
+.wcus-checkout-np-fields .zen-ui-select svg {
+  fill: #888888 !important;
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* Відступ під заголовком "Вкажіть адресу доставки" */
+.wcus-checkout-np-fields h3 {
+  margin-bottom: 20px !important;
 }
 
 /* --- 10.5. Notifications / Notices (Premium Toast Module) --- */

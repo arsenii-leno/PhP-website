@@ -1,205 +1,267 @@
-jQuery(document.body).ready(function($) {
-    
-    /**
-     * 1. SMART CHECKOUT: SMOOTH SCROLL & NAVIGATION
-     */
-    
-    // Prevent default WooCommerce scroll jump on cart update
-    $(document.body).on('updated_wc_div', function() {
-        setTimeout(function() {
-            $('html, body').stop(true, false);
-        }, 5);
-    });
-
-    // Inject "Proceed to Payment" button after the native update button
-    function injectSmartButton() {
-        if ($('.med-smart-checkout-btn').length === 0 && $('button[name="update_cart"]').length > 0) {
-            $('button[name="update_cart"]').after('<button type="button" class="med-smart-checkout-btn">Перейти до оплати</button>');
-        }
-    }
-    
-    injectSmartButton();
-    $(document.body).on('updated_wc_div', injectSmartButton);
-
-    // Smooth scroll to cart totals/collaterals
-    $(document).on('click', '.med-smart-checkout-btn', function(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $('.cart-collaterals').offset().top - 80
-        }, 600);
-    });
-
-
-    /**
-     * 2. AUTO-REFRESH ON EMPTY CART
-     */
-    $(document.body).on('updated_wc_div', function() {
-        if ($('.woocommerce-cart-form__cart-item').length === 0 && window.location.href.includes('/cart')) {
-            window.location.reload();
-        }
-    });
-
-
-    /**
-     * 3. BACK NAVIGATION (CATEGORIES & SINGLE PRODUCTS)
-     */
-    
-    // Injects "Back to Catalog" button on category/archive pages (compatible with AJAX filters)
-    function injectCategoryBackButton() {
-        var isCategoryPage = $('body').hasClass('archive') || 
-                             $('body').hasClass('tax-product_cat') || 
-                             window.location.href.includes('/product-category/') || 
-                             window.location.search.includes('product_cat=');
-
-        if (isCategoryPage && $('.med-back-to-catalog').length === 0) {
-            var backBtnHTML = `
-                <div class="med-back-nav">
-                    <a href="/catalog/" class="med-back-to-catalog">
-                        <span class="med-arrow">←</span> Повернутися до каталогу
-                    </a>
-                </div>
-            `;
-            
-            var $target = $('.woocommerce-result-count').length > 0 ? $('.woocommerce-result-count') : $('.woocommerce-products-header');
-            if ($target.length > 0) {
-                $target[$target.hasClass('woocommerce-result-count') ? 'before' : 'after'](backBtnHTML);
-            }
-        }
-    }
-
-    // Initial injection on load
-    injectCategoryBackButton();
-
-    // Re-inject button when content reloads via AJAX filters, pagination or sorting
-    $(document.body).on('updated_wc_div updated_addons updated_post_meta hashchange vertical_layouts_refresh', function() {
-        setTimeout(injectCategoryBackButton, 100);
-    });
-
-    // Single Product Pages: Smart History Back
-    if (window.location.href.includes('/product/')) {
-        var productBackBtnHTML = `
-            <div class="med-back-nav" style="margin-bottom: 20px;">
-                <a href="#" class="med-back-to-catalog med-smart-back">
-                    <span class="med-arrow">←</span> Повернутися назад
-                </a>
-            </div>
-        `;
-        
-        if ($('.product_title').length > 0) {
-            $('.product_title').before(productBackBtnHTML);
-        }
-
-        $('.med-smart-back').on('click', function(e) {
-            e.preventDefault();
-            var currentHost = window.location.hostname;
-            
-            // Navigate back if referrer is internal, otherwise fallback to global catalog
-            if (document.referrer && document.referrer.includes(currentHost)) {
-                window.history.back();
-            } else {
-                window.location.href = '/catalog/';
-            }
-        });
-    }
-
-
-    /**
-     * 4. UNIVERSAL TOAST MESSAGES (STATIC & AJAX)
-     */
-    
-    // Toast auto-hide timer with hover pause functionality
-    function initToastTimer($toastElement) {
-        var hideTimeout;
-        
-        function startTimer() {
-            hideTimeout = setTimeout(function() {
-                $toastElement.fadeOut(600, function() {
-                    $(this).remove(); 
-                });
-            }, 2000); 
-        }
-        
-        startTimer();
-
-        $toastElement.on('mouseenter', function() {
-            clearTimeout(hideTimeout);
-        }).on('mouseleave', function() {
-            startTimer();
-        });
-    }
-
-    // Initialize static WooCommerce notices on page load
-    var $staticToast = $('.woocommerce-notices-wrapper .woocommerce-message');
-    if ($staticToast.length > 0) {
-        initToastTimer($staticToast);
-    }
-
-    // Display floating toast notification on AJAX add-to-cart event (Supports filtered archives)
-    $(document.body).on('added_to_cart', function() {
-        var isArchive = $('body').hasClass('archive') || 
-                        window.location.href.includes('/product-category/') || 
-                        window.location.search.includes('product_cat=') ||
-                        window.location.pathname.includes('/catalog/');
-
-        if (isArchive) {
-            $('.med-ajax-toast-wrapper').remove(); // Clear active toasts
-            
-            var ajaxToastHTML = `
-                <div class="woocommerce-notices-wrapper med-ajax-toast-wrapper">
-                    <div class="woocommerce-message" role="alert">
-                        <a href="/cart/" class="button wc-forward">Переглянути кошик</a> 
-                        Товар успішно додано у ваш кошик.
-                    </div>
-                </div>
-            `;
-            
-            $('body').append(ajaxToastHTML);
-            initToastTimer($('.med-ajax-toast-wrapper .woocommerce-message'));
-        }
-    });
-
-});
-
-
 /**
- * 5. SOCIAL MEDIA INTEGRATION & ANALYTICS (VANILLA JS)
+ * Med Clinic Custom Scripts
+ * Version: 1.2.0
+ * Architecture: Object-Literal Pattern (Enterprise Standard)
  */
+(function($) {
+    'use strict';
 
-// Track outbound social media links via Google Analytics (gtag.js)
-function trackSocialClick(platform) {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'click_social', {
-            'platform': platform,
-            'page_location': window.location.href,
-            'page_title': document.title
-        });
-    }
-    console.log('Social click tracked:', platform);
-}
+    const MedClinic = {
 
-// DomReady: Manage visibility and placement of the social icons bar
-document.addEventListener('DOMContentLoaded', function() {
-    const isWooCommerceFlow = /\/(cart|checkout|order-received)/.test(window.location.pathname);
-    const socialBar = document.querySelector('.med-header-social');
-    
-    if (!socialBar) return;
+        // Головний ініціалізатор
+        init: function() {
+            this.bindCoreEvents();
+            this.initSmartCheckout();
+            this.initBackNavigation();
+            this.initToasts();
+            this.initSocialBar();
+            this.initLogoLink();
+            this.initNovaPoshtaSelects();
+        },
 
-    // Remove social bar entirely on checkout/cart funnels to prevent conversion drops
-    if (isWooCommerceFlow) {
-        socialBar.remove();
-        return;
-    }
+        // Утиліта: Debounce (Запобігає витоку пам'яті при масових AJAX-подіях)
+        debounce: function(func, wait) {
+            let timeout;
+            return function(...args) {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(this, args), wait);
+            };
+        },
 
-    // Relocate social bar to header next to the cart icon
-    const headerCart = document.querySelector('a#header_cart');
-    if (headerCart && headerCart.parentNode) {
-        headerCart.before(socialBar);
-    } else {
-        console.warn("Cart icon not found. Social bar remains in default container.");
-    }
-});
+        // Глобальні події WooCommerce
+        bindCoreEvents: function() {
+            $(document.body).on('updated_wc_div', () => {
+                // Блокування різкого стрибка екрану при оновленні кошика
+                setTimeout(() => $('html, body').stop(true, false), 5);
+                this.checkEmptyCart();
+            });
+        },
 
-// MainPage: Add clickable logo
-jQuery(document).ready(function($) {
-    $('.logo span#logo').wrap('<a href="/" title="На Головну"></a>');
-});
+        // 1. Smart Checkout (Кнопки та скроли)
+        initSmartCheckout: function() {
+
+            const injectBtn = this.debounce(() => {
+
+                const $updateBtn = $('button[name="update_cart"]');
+
+                if (
+                    $updateBtn.length &&
+                    $('.med-smart-checkout-btn').length === 0
+                ) {
+
+                    $updateBtn.after(
+                        '<button type="button" class="med-smart-checkout-btn">Перейти до оплати</button>'
+                    );
+
+                }
+
+            }, 100);
+
+            injectBtn();
+
+            $(document.body).on('updated_wc_div', injectBtn);
+
+            $(document).on('click', '.med-smart-checkout-btn', function(e) {
+
+                e.preventDefault();
+
+                const $target = $('.cart-collaterals');
+
+                if (!$target.length) {
+                    return;
+                }
+
+                $('html, body').animate({
+                    scrollTop: $target.offset().top - 80
+                }, 600);
+
+            });
+
+        },
+
+        initNovaPoshtaSelects: function() {
+
+            const initSelectWoo = () => {
+
+                $('#billing_np_city, #billing_np_warehouse').each(function() {
+
+                    const $select = $(this);
+
+                    if (
+                        $select.length &&
+                        !$select.hasClass('select2-hidden-accessible')
+                    ) {
+
+                        $select.selectWoo({
+                            width: '100%',
+                            language: 'uk'
+                        });
+
+                    }
+
+                });
+
+            };
+
+            initSelectWoo();
+
+            $(document.body).on(
+                'updated_checkout updated_wc_div',
+                this.debounce(initSelectWoo, 100)
+            );
+
+        },
+
+        // 2. Авто-рефреш порожнього кошика
+        checkEmptyCart: function() {
+            if ($('.woocommerce-cart-form__cart-item').length === 0 && window.location.pathname.includes('/cart')) {
+                window.location.reload();
+            }
+        },
+
+        // 3. Навігація "Назад" (Категорії та Товари)
+        initBackNavigation: function() {
+            const injectCategoryBtn = () => {
+                const path = window.location.pathname;
+                const search = window.location.search;
+                const isCategoryPage = $('body').hasClass('archive') ||
+                    $('body').hasClass('tax-product_cat') ||
+                    path.includes('/catalog/') ||
+                    path.includes('/product-category/') ||
+                    search.includes('product_cat=');
+
+                if (isCategoryPage && $('.med-back-to-catalog').length === 0) {
+                    const backBtnHTML = `
+                        <div class="med-back-nav">
+                            <a href="/catalog/" class="med-back-to-catalog">
+                                <span class="med-arrow">←</span> Повернутися до каталогу
+                            </a>
+                        </div>
+                    `;
+                    const $target = $('.woocommerce-result-count').length > 0 ? $('.woocommerce-result-count') : $('.woocommerce-products-header');
+                    if ($target.length > 0) {
+                        $target[$target.hasClass('woocommerce-result-count') ? 'before' : 'after'](backBtnHTML);
+                    }
+                }
+            };
+
+            // Первинний запуск
+            injectCategoryBtn();
+
+            // AJAX запуск (із захистом Debounce в 150мс)
+            const debouncedInject = this.debounce(injectCategoryBtn, 150);
+            $(document.body).on('updated_wc_div updated_addons updated_post_meta hashchange vertical_layouts_refresh', debouncedInject);
+
+            // Логіка для сторінки єдиного товару
+            if (window.location.pathname.includes('/product/')) {
+                if ($('.product_title').length > 0 && $('.med-smart-back').length === 0) {
+                    $('.product_title').before(`
+                        <div class="med-back-nav" style="margin-bottom: 20px;">
+                            <a href="#" class="med-back-to-catalog med-smart-back">
+                                <span class="med-arrow">←</span> Повернутися назад
+                            </a>
+                        </div>
+                    `);
+                }
+
+                $(document).on('click', '.med-smart-back', function(e) {
+                    e.preventDefault();
+                    if (document.referrer && document.referrer.includes(window.location.hostname)) {
+                        window.history.back();
+                    } else {
+                        window.location.href = '/catalog/';
+                    }
+                });
+            }
+        },
+
+        // 4. Універсальні Toast-повідомлення
+        initToasts: function() {
+            const initTimer = ($toast) => {
+                let hideTimeout;
+                const start = () => {
+                    hideTimeout = setTimeout(() => {
+                        $toast.fadeOut(600, function() { $(this).remove(); });
+                    }, 2500);
+                };
+
+                start();
+                $toast.on('mouseenter', () => clearTimeout(hideTimeout)).on('mouseleave', start);
+            };
+
+            // Статичні повідомлення
+            const $staticToast = $('.woocommerce-notices-wrapper .woocommerce-message');
+            if ($staticToast.length > 0) {
+                initTimer($staticToast);
+            }
+
+            // AJAX додавання в кошик
+            $(document.body).on('added_to_cart', () => {
+                const path = window.location.pathname;
+                const isArchive = $('body').hasClass('archive') ||
+                    path.includes('/product-category/') ||
+                    window.location.search.includes('product_cat=') ||
+                    path.includes('/catalog/');
+
+                if (isArchive) {
+                    $('.med-ajax-toast-wrapper').remove();
+
+                    const ajaxToastHTML = `
+                        <div class="woocommerce-notices-wrapper med-ajax-toast-wrapper">
+                            <div class="woocommerce-message" role="alert">
+                                <a href="/cart/" class="button wc-forward">Переглянути кошик</a> 
+                                Товар успішно додано у ваш кошик.
+                            </div>
+                        </div>
+                    `;
+
+                    $('body').append(ajaxToastHTML);
+                    initTimer($('.med-ajax-toast-wrapper .woocommerce-message'));
+                }
+            });
+        },
+
+        // 5. Соціальні іконки (Захист конверсії на Checkout)
+        initSocialBar: function() {
+            const isWooCommerceFlow = /\/(cart|checkout|order-received)/.test(window.location.pathname);
+            const $socialBar = $('.med-header-social');
+
+            if ($socialBar.length === 0) return;
+
+            if (isWooCommerceFlow) {
+                $socialBar.remove(); // Прибираємо, щоб не відволікати від оплати
+                return;
+            }
+
+            const $headerCart = $('a#header_cart');
+            if ($headerCart.length > 0) {
+                $headerCart.before($socialBar);
+            }
+        },
+
+        // 6. Клікабельне лого
+        initLogoLink: function() {
+            const $logo = $('.logo span#logo');
+            if ($logo.length > 0 && $logo.parent('a').length === 0) {
+                $logo.wrap('<a href="/" title="На Головну"></a>');
+            }
+        }
+    };
+
+    // Глобальна функція для HTML (щоб не зламати старі onClick)
+    window.trackSocialClick = function(platform) {
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'click_social', {
+                'platform': platform,
+                'page_location': window.location.href,
+                'page_title': document.title
+            });
+        }
+    };
+
+    // Запуск ядра JS після завантаження DOM
+    $(document).ready(function() {
+        MedClinic.init();
+    });
+
+})(jQuery);

@@ -125,63 +125,26 @@ final class Bootstrap {
     }
 
     /**
-     * Оптимізація полів Checkout
+     * Оптимізація полів Checkout (безпечна для Нової Пошти)
      */
-    public function optimize_checkout_fields( array $fields ): array {
-        $fields_to_remove = [
-            'billing_company',
-            'billing_country',
-            'billing_address_1',
-            'billing_address_2',
-            'billing_city',
-            'billing_state',
-            'billing_postcode'
-        ];
+    public function optimize_checkout_fields( $fields ) {
+        // Прибираємо лише те, що точно не зламає доставку
+        unset( $fields['billing']['billing_company'] );
+        unset( $fields['order']['order_comments'] );
 
-        foreach ( $fields_to_remove as $field_key ) {
-            if ( isset( $fields['billing'][ $field_key ] ) ) {
-                unset( $fields['billing'][ $field_key ] );
-            }
-        }
-
-        if ( isset( $fields['shipping'] ) ) {
-            unset( $fields['shipping'] );
-        }
-
-        if ( isset( $fields['billing']['billing_phone'] ) ) {
-            $fields['billing']['billing_phone']['required'] = true;
-        }
-
+        // ЖОДНИХ unset для адресних полів, інакше знову буде 500 помилка
         return $fields;
     }
 }
 
-// ТИМЧАСОВИЙ ХІРУРГІЧНИЙ ФІКС ДЛЯ ПРИМУСОВОЇ АКТИВАЦІЇ WPBAKERY
-add_action( 'admin_init', function() {
-    $plugin_slug = 'js_composer/js_composer.php';
-    $active_plugins = get_option( 'active_plugins' );
-
-    if ( is_array( $active_plugins ) && ! in_array( $plugin_slug, $active_plugins, true ) ) {
-        $active_plugins[] = $plugin_slug;
-        update_option( 'active_plugins', $active_plugins );
-        wp_cache_flush();
-    }
-} );
-
-// ДИНАМІЧНЕ МАСОВЕ ОГОЛОШЕННЯ СУМІСНОСТІ З HPOS
+// Оголошення сумісності MU-плагіна з WooCommerce HPOS
 add_action( 'before_woocommerce_init', function() {
     if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
-        $active_plugins = get_option( 'active_plugins' );
-
-        if ( is_array( $active_plugins ) ) {
-            foreach ( $active_plugins as $plugin_file ) {
-                \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
-                    'custom_order_table',
-                    $plugin_file,
-                    true
-                );
-            }
-        }
+        \Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+                'custom_order_table',
+                __FILE__,
+                true
+        );
     }
 } );
 
@@ -191,6 +154,18 @@ add_action( 'init', function() {
         add_filter( 'show_admin_bar', '__return_false' );
     }
 } );
+
+/**
+ * Відключення блоку розрахунку доставки виключно на сторінці Кошика.
+ * Доставка буде розраховуватися лише на сторінці Оформлення замовлення (Checkout).
+ */
+add_filter( 'woocommerce_cart_ready_to_calc_shipping', function( $show_shipping ) {
+    if ( is_cart() ) {
+        return false;
+    }
+    return $show_shipping;
+}, 99 );
+
 
 // Запуск
 Bootstrap::get_instance();
