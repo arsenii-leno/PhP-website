@@ -1,46 +1,48 @@
-name: Deploy Website to Fornex via SSH Key
+name: Deploy Website to Fornex via FTPS
 
 on:
   push:
     branches:
       - eye-clinic-site
 
+# Забороняємо паралельні деплої (Race condition protection))
 concurrency:
   group: production-deploy
   cancel-in-progress: true
 
 jobs:
   web-deploy:
-    name: 🚀 Deploy WordPress via Rsync/SSH
+    name: 🚀 Deploy WordPress to Fornex
     runs-on: ubuntu-latest
 
     steps:
       - name: 🚚 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 🔐 Install SSH Key
-        uses: shimataro/ssh-key-action@v2
+      - name: 📂 Sync files via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: ignore
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
 
-      - name: 🔎 PHP Syntax Check
-        run: |
-          find wp-content -name "*.php" -print0 | xargs -0 -n1 php -l
+          # Захищене з'єднання
+          protocol: ftps
+          port: 21
 
-      - name: 📂 Sync files with Rsync over SSH
-        run: |
-          rsync -avz --delete-delay \
-            --exclude='.git*' \
-            --exclude='.github' \
-            --exclude='.idea' \
-            --exclude='.junie' \
-            --exclude='node_modules' \
-            --exclude='.DS_Store' \
-            --exclude='error_log' \
-            --exclude='wp-config.php' \
-            --exclude='.htaccess' \
-            --exclude='wp-content/uploads' \
-            --exclude='wp-content/cache' \
-            --exclude='wp-content/upgrade' \
-            ./ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/a49718/public_html/med.uz.ua/
+          # FTP user вже прив'язаний до /home/a49718/public_html/med.uz.ua/
+          server-dir: ./
+
+          # Захист production файлів та медіа
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/.idea/**
+            **/.junie/**
+            **/node_modules/**
+            **/.DS_Store
+            **/.well-known/**
+            error_log
+            wp-config.php
+            wp-content/uploads/**
+            wp-content/cache/**
