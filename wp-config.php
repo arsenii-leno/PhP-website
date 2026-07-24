@@ -29,7 +29,7 @@ define( 'DB_NAME', 'a49718_med-uz-ua' );
 define( 'DB_USER', 'a49718_cool-admin' );
 
 /** Пароль користувача бази даних */
-define( 'DB_PASSWORD', '' );
+define( 'DB_PASSWORD', 'bW7mF9tnJ5feL3qlDytV2noIcOkp6j' );
 
 /** Сервер бази даних */
 define( 'DB_HOST', 'localhost' );

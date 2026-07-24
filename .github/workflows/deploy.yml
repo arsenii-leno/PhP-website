@@ -1,11 +1,10 @@
-name: Deploy Website to Fornex via FTPS
+name: Deploy Website to Fornex via SFTP
 
 on:
   push:
     branches:
       - eye-clinic-site
 
-# Забороняємо паралельні деплої (Race condition protection))
 concurrency:
   group: production-deploy
   cancel-in-progress: true
@@ -14,26 +13,19 @@ jobs:
   web-deploy:
     name: 🚀 Deploy WordPress to Fornex
     runs-on: ubuntu-latest
-
     steps:
       - name: 🚚 Checkout repository
         uses: actions/checkout@v4
 
-      - name: 📂 Sync files via FTPS
+      - name: 📂 Sync files via SFTP (rsync)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ secrets.FTP_SERVER }} # Твій IP: 176.10.124.188 або hostch01.fornex.org
+          username: ${{ secrets.FTP_USERNAME }} # a49718
           password: ${{ secrets.FTP_PASSWORD }}
-
-          # Захищене з'єднання
-          protocol: ftps
-          port: 21
-
-          # FTP user вже прив'язаний до /home/a49718/public_html/med.uz.ua/
-          server-dir: ./
-
-          # Захист production файлів та медіа
+          protocol: sftp
+          port: 22 # або 1022 якщо стандартний закритий
+          server-dir: ./public_html/med.uz.ua/
           exclude: |
             **/.git*
             **/.github/**
