@@ -82,7 +82,15 @@ rm -rf wp-content/cache/supercache/med.uz.ua/*
 
 ---
 
-## 👨‍💻 Engineering Ownership
+## 👨‍💻 Architecture & Engineering
 
-* **Lead Engineer:** Arsenii Leno (Software Engineering @ FIIT STU Bratislava | Law & IP @ UzhNU)
-* **Domain:** Systems Stabilization, Full-Stack Architecture & Conversion Engineering
+**Arsenii Leno** *Double-degree Student in Software Engineering (FIIT STU Bratislava) & Law (UzhNU Faculty of Law)* *Google Certified AI-Powered Performance Ads Specialist*
+
+* 🌐 **Portfolio & Case Studies:** [arsenii-leno.github.io](https://arsenii-leno.github.io)
+* 📑 **Workfolio Hub:** [Notion Workspace](https://bouncy-pyroraptor-569.notion.site/Workfolio-16c46a8dd0cd80f28fd6c43b2b604b21)
+* 💬 **Telegram:** [@Arsen_Kozaque](https://t.me/Arsen_Kozaque)
+* ✉️ **Email:** [arsenii.leno.digital@gmail.com](mailto:arsenii.leno.digital@gmail.com)
+---
+
+All proprietary code, medical catalogs, branding, and assets are protected.  
+Copyright © 2026 Arsenii Leno. All rights reserved.
