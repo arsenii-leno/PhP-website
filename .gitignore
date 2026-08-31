@@ -1,4 +1,22 @@
+# Environment & Secrets
+.env
+wp-config-local.php
 
+# Logs & Error Dumps
+*.log
+error_log
+wp-content/debug.log
+
+# Caches & Uploads
+wp-content/cache/
+wp-content/uploads/
+
+# macOS / OS metadata
 .DS_Store
+._*
+__MACOSX/
+Thumbs.db
 
-wp-config.php
+# IDEs
+.idea/
+.vscode/
