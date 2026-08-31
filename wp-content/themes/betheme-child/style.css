@@ -200,7 +200,7 @@ Version: 1.6.2
   }
 }
 
-/* --- 2.2. Floatton & Contact Form 7 Isolation --- */
+/* --- 2.2. Floatton & Custom Contact Form Isolation --- */
 html body {
   
   /* Container and trigger button targeting inline JS styles */
@@ -214,8 +214,8 @@ html body {
     padding: 25px !important;
     background: #ffffff !important;
 
-    /* CF7 inputs fields */
-    .wpcf7-form-control:not([type="submit"]) {
+    /* Custom Form inputs fields (замість wpcf7-form-control) */
+    .med-form-control:not([type="submit"]) {
       width: 100% !important;
       height: 46px !important;
       border: 2px solid var(--input-border) !important;
@@ -238,7 +238,8 @@ html body {
       }
     }
 
-    .wpcf7-form label {
+    /* Форма та Labels (замість wpcf7-form) */
+    .med-contact-form label {
       font-size: 13px !important;
       font-weight: 700 !important;
       text-transform: uppercase !important;
@@ -248,7 +249,8 @@ html body {
       margin-bottom: 4px !important;
     }
 
-    .wpcf7-submit {
+    /* Кнопка відправки (замість wpcf7-submit) */
+    .med-form-submit {
       width: 100% !important;
       height: 50px !important;
       background-color: var(--brand-color) !important;
@@ -268,6 +270,31 @@ html body {
       &:active {
         transform: scale(0.98) !important;
       }
+    }
+
+    /* --- Додано: Стилізація статусів форми --- */
+    .med-form-success {
+      background-color: #d4edda !important;
+      color: #155724 !important;
+      border: 1px solid #c3e6cb !important;
+      padding: 12px 15px !important;
+      border-radius: var(--border-radius) !important;
+      margin-bottom: 15px !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      line-height: 1.4 !important;
+    }
+
+    .med-form-error {
+      background-color: #f8d7da !important;
+      color: #721c24 !important;
+      border: 1px solid #f5c6cb !important;
+      padding: 12px 15px !important;
+      border-radius: var(--border-radius) !important;
+      margin-bottom: 15px !important;
+      font-size: 14px !important;
+      font-weight: 500 !important;
+      line-height: 1.4 !important;
     }
   }
 
@@ -822,18 +849,21 @@ html body {
       display: none !important;
   }
 
-  /* Знижуємо z-index для контейнера Call Now Button */
-div.call-now-button,
-div[class*="cnb-bottom"] {
-    z-index: 999 !important;
+/* Актуальний CSS для Call Now Button v2.0+ */
+
+/* Правий кут та відступи */
+.cnb-container {
+    bottom: 20px !important;
+    right: 16px !important;
+    left: auto !important;
+    z-index: 999 !important; 
 }
 
-/* Ховаємо Call Now Button на сторінках каталогу, товарів, кошика та оформлення */
-body.archive div[class*="cnb-bottom"],
-body.single-product div[class*="cnb-bottom"],
-body.woocommerce-cart div[class*="cnb-bottom"],
-body.woocommerce-checkout div[class*="cnb-bottom"],
-body[class*="catalog"] div[class*="cnb-bottom"] {
+/* Ховаємо кнопкову панель ТІЛЬКИ на сторінках магазину WooCommerce */
+.woocommerce-cart .cnb-container,
+.woocommerce-checkout .cnb-container,
+.single-product .cnb-container,
+.archive.post-type-archive-product .cnb-container {
     display: none !important;
 }
 
@@ -858,6 +888,8 @@ body.woocommerce-cart p.woocommerce-shipping-destination {
   margin: 0 !important;
   padding: 0 !important;
 }
+
+
 
 /* ==========================================================================
    09. COMPONENTS & UI ELEMENTS (GENERAL)
@@ -3094,24 +3126,6 @@ body:is(.archive.tax-product_cat, .single-product) {
     width: calc(100vw - 32px) !important;
     max-width: 380px !important;
     z-index: 9989 !important;
-  }
-
-  /* Right FAB (Call Now) */
-  a#callnowbutton {
-    left: auto !important;
-    right: 16px !important;
-    bottom: 20px !important;
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 50% !important;
-    z-index: 9990 !important;
-    background-position: center !important;
-    background-size: 28px !important;
-    background-repeat: no-repeat !important;
-  }
-  
-  a#callnowbutton span {
-    display: none !important;
   }
 
   /* Side Menu Wrapper */
