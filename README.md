@@ -19,8 +19,7 @@
 | **PHP Runtime Migration**     | Direct **PHP 7.4.x → PHP 8.2.x** migration while preserving the existing WordPress architecture      |
 | **Legacy WordPress Recovery** | Stabilized a mature production installation with accumulated plugin, theme, and builder dependencies |
 | **Architecture Preservation** | Existing content model, WPBakery layouts, WooCommerce flows, and business logic remained operational |
-| **Cache Recovery**            | Diagnosed and remediated 1,200+ stale `wp-super-cache` fragments and filesystem pressure             |
-| **Security Remediation**      | Audited PHP execution surfaces, isolated vulnerable legacy components, and hardened configuration    |
+| **Caching Migration**         | Replaced fragile legacy caching plugins with optimized server/proxy caching rules                    |                                                 |**Security Remediation**        | Audited PHP execution surfaces, isolated vulnerable legacy components, and hardened configuration   |
 | **Business Logic Isolation**  | Moved critical application logic into a persistent WordPress Must-Use Plugin layer                   |
 | **Commerce Stabilization**    | Preserved WooCommerce, LiqPay, shipping, checkout, and telemetry integrations                        |
 | **Measurement Recovery**      | Consolidated GTM, GA4, Enhanced Conversions, phone-call, form, and commerce signals                  |
@@ -45,12 +44,8 @@ The system combined:
 * custom business logic
 * production analytics and conversion tracking
 
-> **Security Incident / Recovery Note:** The legacy WordPress dependency surface — including outdated plugins, shortcode-driven components, and abandoned frontend modules — had already been exploited, resulting in a compromised installation with malicious PHP payloads and trojanized files. The platform was successfully recovered through static inspection, malicious-code removal, vulnerable component isolation, configuration hardening, and validation of critical production workflows, while preserving the existing site architecture and content.
+> **Security Incident / Recovery Note:** The legacy WordPress dependency surface — including outdated plugins, shortcode-driven components, and abandoned frontend modules(CF7) — had already been exploited, resulting in a compromised installation with malicious PHP payloads and trojanized files. The platform was successfully recovered through static inspection, malicious-code removal, vulnerable component isolation, configuration hardening, and validation of critical production workflows, while preserving the existing site architecture and content.
 
-
-The objective was **not to immediately rebuild the website from scratch**.
-
-The challenge was to understand an interconnected legacy application, identify its failure domains, preserve business-critical behavior, remove or isolate dangerous components, modernize the runtime, and bring the platform back to a **stable and maintainable baseline**.
 
 ```text
 WordPress Core
@@ -66,7 +61,7 @@ WordPress Core
       └── Analytics / Conversion Layer
 ```
 
-This required treating WordPress not merely as a CMS, but as a **legacy PHP application platform with real production dependencies**.
+This was **legacy PHP application platform with real production dependencies**.
 
 ---
 
@@ -104,15 +99,11 @@ The objective was to classify components into four practical categories:
 └───────────────────────┘
 ```
 
-This dependency-first approach reduced the risk of "fixing" one component while silently breaking another production workflow.
-
 ---
 
 ## 2. WPBakery / Visual Composer Recovery
 
 The frontend relied heavily on **Visual Composer / WPBakery (`js_composer`)** and builder-generated content structures.
-
-Instead of treating generated builder code as an untouchable black box, the recovery process involved understanding its place within the wider WordPress dependency graph.
 
 Engineering work included:
 
@@ -123,12 +114,6 @@ Engineering work included:
 * reduction of unnecessary runtime overhead
 * separation of custom application logic from presentation logic
 * maintenance of existing pages during backend remediation
-
-The important constraint was:
-
-> **Modernize the runtime and infrastructure without requiring the clinic to reconstruct years of existing content.**
-
-This is particularly relevant when recovering WordPress installations where page builders effectively form part of the application's persisted data model.
 
 ---
 
@@ -148,19 +133,6 @@ Examples included:
 * `wc-liqpay`
 * `wc-ukr-shipping`
 
-The problem was therefore not simply:
-
-```text
-"Which plugins are old?"
-```
-
-but:
-
-```text
-"Which runtime dependencies can be modified or removed
-without breaking an unrelated production workflow?"
-```
-
 Critical execution paths were mapped before components were disabled, replaced, or isolated.
 
 This allowed unnecessary attack surface and overhead to be reduced while preserving functionality required by the clinic.
@@ -171,13 +143,11 @@ This allowed unnecessary attack surface and overhead to be reduced while preserv
 
 ## PHP 7.4.x → PHP 8.2.x
 
-> ### Major Engineering Milestone
+> ### Major migration process
 >
 > The production application was migrated directly from **PHP 7.4.x to PHP 8.2.x while preserving the established WordPress architecture, content model, WPBakery layouts, plugin ecosystem, WooCommerce integrations, and business-critical workflows.**
 
-This was intentionally **not** an architectural rewrite.
-
-The existing application had to survive a substantial runtime-generation jump while retaining its established behavior.
+This was intentionally **not** an architectural rewrite(hopefully).
 
 ### Compatibility Surface
 
@@ -238,10 +208,6 @@ The migration required validation and remediation across:
 
 ### Why This Matters
 
-A PHP major-version upgrade in a mature WordPress installation is not equivalent to changing a version selector in cPanel.
-
-The runtime sits underneath:
-
 ```text
 Theme
   ↓
@@ -260,9 +226,7 @@ WordPress Core
 PHP Runtime
 ```
 
-A compatibility failure at any layer can propagate upward into broken pages, checkout failures, missing forms, PHP fatal errors, or inaccessible administration.
-
-The result was therefore a runtime modernization **without forcing the business to absorb the cost and risk of an immediate architectural rewrite**.
+A compatibility failure at any layer can lead to PHP fatal errors, or inaccessible administration.
 
 ---
 
@@ -270,20 +234,13 @@ The result was therefore a runtime modernization **without forcing the business 
 
 ## Must-Use Plugin Architecture
 
-Business-critical functionality was moved away from fragile theme/plugin coupling into a dedicated WordPress **Must-Use Plugin**:
+The development of a dedicated WordPress **Must-Use Plugin**:
 
 ```text
 wp-content/
 └── mu-plugins/
     └── med-clinic-core.php
 ```
-
-The MU-plugin layer provides a persistent execution location for application-specific functionality that should not disappear when:
-
-* a theme is replaced
-* a normal plugin is accidentally disabled
-* builder components change
-* frontend templates are refactored
 
 Conceptually:
 
@@ -316,64 +273,22 @@ The production problems extended below WordPress itself.
 
 The installation had accumulated more than **1,200 stale `wp-super-cache` static fragments**.
 
-On constrained hosting, uncontrolled cache growth can become a filesystem and inode-management problem rather than a performance optimization.
-
 Recovery included:
 
 * cache directory inspection
-* stale static buffer cleanup
 * cache lifetime reconfiguration
 * file-lock cleanup
-* filesystem usage monitoring
-* inode pressure mitigation
 * validation of cache regeneration behavior
-
-Example maintenance operation:
-
-```bash
-rm -rf wp-content/cache/supercache/med.uz.ua/*
-```
-
-The objective was not merely to perform a one-time purge.
-
-The goal was to restore a **predictable cache lifecycle compatible with the hosting environment**.
 
 ---
 
 # 🛡️ Security & Malware-Oriented Remediation
 
-Legacy WordPress installations expose a large PHP execution surface, including code that may no longer be reachable from the visible frontend but still exists on disk.
-
-Static inspection included suspicious and frequently abused PHP constructs:
-
-```bash
-grep -rnE "(eval\(|base64_decode\()" wp-content/plugins/ --exclude-dir=vendor
-```
-
-> Pattern detection alone does not prove malicious behavior. Matches were treated as investigation targets requiring contextual inspection.
-
-The remediation process covered:
-
-* inspection of PHP files for obfuscated payloads
-* investigation of suspicious `eval` usage
-* investigation of `base64_decode` patterns
-* legacy plugin review
-* isolation of vulnerable slider components
-* active/inactive plugin inspection
-* `wp-config.php` hardening
-* database connection configuration review
-* WordPress salt verification
-* filesystem permission normalization
-* `644/755` permission-policy review
-* unnecessary attack-surface reduction
-
-Components such as `revslider-off` were treated as security-sensitive code surfaces rather than assumed safe merely because they were not part of the visible frontend.
+Legacy WordPress plugins were removed and was substituted by own modern code.
 
 ---
 
 # 🛒 WooCommerce & Business-Critical Integrations
-
-The platform contained commerce and logistics functionality that had to remain operational throughout remediation.
 
 Production integrations included:
 
@@ -382,11 +297,7 @@ Production integrations included:
 * `wc-ukr-shipping`
 * checkout error telemetry
 * service-request tracking
-* conversion measurement
-
-This introduced an important engineering constraint:
-
-> **Infrastructure stabilization could not come at the expense of customer-facing or revenue-related workflows.**
+* additional business logic added
 
 The recovery process therefore treated checkout, payments, shipping, and conversion events as critical application paths requiring validation after infrastructure changes.
 
@@ -435,49 +346,6 @@ WordPress / WooCommerce
                        Enhanced
                        Conversions
 ```
-
-The stabilized application therefore became a cleaner source of behavioral and conversion signals rather than merely a recovered website.
-
----
-
-# 🔧 Production Diagnostics & CLI Maintenance
-
-Legacy WordPress recovery frequently requires operating below the WordPress Admin layer.
-
-## Database Connection Verification
-
-```bash
-php -r "require 'wp-config.php'; global \$wpdb; echo \$wpdb->check_connection() ? 'OK' : 'FAIL';"
-```
-
-## Suspicious PHP Pattern Scan
-
-```bash
-grep -rnE "(eval\(|base64_decode\()" wp-content/plugins/ --exclude-dir=vendor
-```
-
-## Super Cache Cleanup
-
-```bash
-rm -rf wp-content/cache/supercache/med.uz.ua/*
-```
-
-The workflow combines:
-
-```text
-WordPress Admin
-      +
-PHP Runtime Diagnostics
-      +
-Filesystem Inspection
-      +
-MySQL Validation
-      +
-Hosting-Level Maintenance
-```
-
-This is particularly important when WordPress itself is too degraded to provide reliable diagnostics through the administrative interface.
-
 ---
 
 # 🔬 Recovery Methodology
@@ -523,69 +391,10 @@ Recovery therefore prioritizes **dependency awareness and controlled interventio
 
 ---
 
-# 🚑 Legacy WordPress Recovery Capability
-
-This case represents WordPress engineering where the starting point is not:
-
-```text
-New WordPress
-+ New Theme
-+ Clean Database
-+ Modern Plugins
-```
-
-but instead:
-
-```text
-Years of Production History
-            │
-            ├── Legacy PHP
-            ├── WPBakery
-            ├── Shortcodes
-            ├── Old Plugins
-            ├── WooCommerce
-            ├── Payments
-            ├── Shipping
-            ├── Cache Problems
-            ├── Filesystem Constraints
-            ├── Security Concerns
-            ├── Analytics
-            └── Existing Traffic
-```
-
-The engineering path becomes:
-
-```text
-[Unstable Legacy WordPress]
-            │
-            ├── Core / PHP / MySQL Diagnostics
-            ├── Plugin Dependency Mapping
-            ├── WPBakery / Builder Analysis
-            ├── PHP 7.4 → 8.2 Compatibility Work
-            ├── Cache & Filesystem Recovery
-            ├── Security Inspection
-            ├── WooCommerce Stabilization
-            ├── Analytics Recovery
-            └── MU-Plugin Logic Isolation
-            │
-            ▼
-[Controlled Legacy Architecture]
-            │
-            ├── Stable
-            ├── Understandable
-            ├── Maintainable
-            └── Migration-Ready
-```
-
-The practical capability demonstrated by this project is therefore:
-
-> **Taking a heavily modified WordPress installation — including builders, legacy plugins, custom PHP, WooCommerce, hosting constraints, and accumulated technical debt — and recovering it into an understandable and operational system before deciding what should be maintained, refactored, or replaced.**
-
----
 
 # 🚀 Migration Bridge to Modern Architecture
 
-The recovered WordPress system also provided the technical and data baseline required for the next generation of the platform.
+The recovered WordPress system  provided the technical and data baseline required for the next generation of the platform.
 
 ```text
 ┌──────────────────────────────┐
@@ -630,7 +439,7 @@ This transformed the old WordPress installation from an opaque liability into a 
 
 ---
 
-# 🧰 Demonstrated Engineering Skills
+# 🧰 The work done
 
 ### WordPress Engineering
 
@@ -647,7 +456,6 @@ This transformed the old WordPress installation from an opaque liability into a 
 
 * PHP 7.4.x → PHP 8.2.x migration
 * runtime compatibility analysis
-* deprecated behavior remediation
 * fatal-error diagnostics
 * third-party plugin compatibility investigation
 * legacy PHP modernization
@@ -729,8 +537,6 @@ This transformed the old WordPress installation from an opaque liability into a 
 * ✉️ **Email:** [arsenii.leno.digital@gmail.com](mailto:arsenii.leno.digital@gmail.com)
 
 ---
-
-> **Repository Scope:** This repository documents architecture, recovery methodology, diagnostics, and engineering decisions. Proprietary medical data, production credentials, customer information, and protected application assets are intentionally excluded.
 
 All proprietary code, medical catalogs, branding, and assets are protected.
 Copyright © 2026 Arsenii Leno. All rights reserved.
